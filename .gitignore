@@ -1,6 +1,7 @@
 default.properties
 build.properties
 local.properties
+build/
 bin/
 gen/
 scripts/resources/*.diff

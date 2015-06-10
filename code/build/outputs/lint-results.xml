@@ -1,0 +1,1177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="4" by="lint 24.3">
+
+    <issue
+        id="InconsistentLayout"
+        severity="Warning"
+        message="The id &quot;afc_filechooser_activity_viewgroup_footer2&quot; in layout &quot;afc_file_chooser&quot; is missing from the following layout configurations: layout (present in layout-v11)"
+        category="Correctness"
+        priority="6"
+        summary="Inconsistent Layouts"
+        explanation="This check ensures that a layout resource which is defined in multiple resource folders, specifies the same set of widgets.
+
+This finds cases where you have accidentally forgotten to add a widget to all variations of the layout, which could result in a runtime crash for some resource configurations when a `findViewById()` fails.
+
+There *are* cases where this is intentional. For example, you may have a dedicated large tablet layout which adds some extra widgets that are not present in the phone version of the layout. As long as the code accessing the layout resource is careful to handle this properly, it is valid. In that case, you can suppress this lint check for the given extra or missing views, or the whole layout"
+        errorLine1="            android:id=&quot;@+id/afc_filechooser_activity_viewgroup_footer2&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/layout-v11/afc_file_chooser.xml"
+            line="151"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="InlinedApi"
+        severity="Warning"
+        message="Field requires API level 14 (current min is 11): `android.R.style#Theme_DeviceDefault`"
+        category="Correctness"
+        priority="6"
+        summary="Using inlined constants on older versions"
+        explanation="This check scans through all the Android API field references in the application and flags certain constants, such as static final integers and Strings, which were introduced in later versions. These will actually be copied into the class files rather than being referenced, which means that the value is available even when running on older devices. In some cases that&apos;s fine, and in other cases it can result in a runtime crash or incorrect behavior. It depends on the context, so consider the code carefully and device whether it&apos;s safe and can be suppressed or whether the code needs tbe guarded.
+
+If you really want to use this API and don&apos;t need to support older devices just set the `minSdkVersion` in your `build.gradle` or `AndroidManifest.xml` files.
+If your code is *deliberately* accessing newer APIs, and you have ensured (e.g. with conditional execution) that this code will only ever be called on a supported platform, then you can annotate your class or method with the `@TargetApi` annotation specifying the local minimum SDK to apply, such as `@TargetApi(11)`, such that this check considers 11 rather than your manifest file&apos;s minimum SDK as the required API level.
+"
+        errorLine1="                theme = getIntent().getIntExtra(_Theme, android.R.style.Theme_DeviceDefault);"
+        errorLine2="                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio,adt">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/java/group/pals/android/lib/ui/filechooser/FileChooserActivity.java"
+            line="315"
+            column="57"/>
+    </issue>
+
+    <issue
+        id="OldTargetApi"
+        severity="Warning"
+        message="Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the `android.os.Build.VERSION_CODES` javadoc for details."
+        category="Correctness"
+        priority="6"
+        summary="Target SDK attribute is not targeting latest version"
+        explanation="When your application runs on a version of Android that is more recent than your `targetSdkVersion` specifies that it has been tested with, various compatibility modes kick in. This ensures that your application continues to work, but it may look out of place. For example, if the `targetSdkVersion` is less than 14, your app may get an option button in the UI.
+
+To fix this issue, set the `targetSdkVersion` to the highest available value. Then test your app to make sure everything works correctly. You may want to consult the compatibility notes to see what changes apply to each version you are adding support for: http://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        url="http://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        urls="http://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        errorLine1="        android:targetSdkVersion=&quot;15&quot; />"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/AndroidManifest.xml"
+            line="16"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="OldTargetApi"
+        severity="Warning"
+        message="Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details."
+        category="Correctness"
+        priority="6"
+        summary="Target SDK attribute is not targeting latest version"
+        explanation="When your application runs on a version of Android that is more recent than your `targetSdkVersion` specifies that it has been tested with, various compatibility modes kick in. This ensures that your application continues to work, but it may look out of place. For example, if the `targetSdkVersion` is less than 14, your app may get an option button in the UI.
+
+To fix this issue, set the `targetSdkVersion` to the highest available value. Then test your app to make sure everything works correctly. You may want to consult the compatibility notes to see what changes apply to each version you are adding support for: http://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        url="http://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        urls="http://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        errorLine1="        targetSdkVersion 15"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/build.gradle"
+            line="9"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        severity="Warning"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        category="Correctness"
+        priority="5"
+        summary="Layout Inflation without a Parent"
+        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
+        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        errorLine1="        View view = LayoutInflater.from(context).inflate(R.layout.afc_context_menu_view, null);"
+        errorLine2="                                                                                         ~~~~">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/java/group/pals/android/lib/ui/filechooser/utils/ui/ContextMenuUtils.java"
+            line="46"
+            column="90"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        severity="Warning"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        category="Correctness"
+        priority="5"
+        summary="Layout Inflation without a Parent"
+        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
+        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        errorLine1="            mViewFiles = (AbsListView) getLayoutInflater().inflate(R.layout.afc_gridview_files, null);"
+        errorLine2="                                                                                                ~~~~">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/java/group/pals/android/lib/ui/filechooser/FileChooserActivity.java"
+            line="711"
+            column="97"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        severity="Warning"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        category="Correctness"
+        priority="5"
+        summary="Layout Inflation without a Parent"
+        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
+        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        errorLine1="            mViewFiles = (AbsListView) getLayoutInflater().inflate(R.layout.afc_listview_files, null);"
+        errorLine2="                                                                                                ~~~~">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/java/group/pals/android/lib/ui/filechooser/FileChooserActivity.java"
+            line="714"
+            column="97"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        severity="Warning"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        category="Correctness"
+        priority="5"
+        summary="Layout Inflation without a Parent"
+        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
+        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        errorLine1="        View view = getLayoutInflater().inflate(R.layout.afc_settings_sort_view, null);"
+        errorLine2="                                                                                 ~~~~">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/java/group/pals/android/lib/ui/filechooser/FileChooserActivity.java"
+            line="914"
+            column="82"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        severity="Warning"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        category="Correctness"
+        priority="5"
+        summary="Layout Inflation without a Parent"
+        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
+        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        errorLine1="        View view = getLayoutInflater().inflate(R.layout.afc_simple_text_input_view, null);"
+        errorLine2="                                                                                     ~~~~">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/java/group/pals/android/lib/ui/filechooser/FileChooserActivity.java"
+            line="1013"
+            column="86"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        severity="Warning"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        category="Correctness"
+        priority="5"
+        summary="Layout Inflation without a Parent"
+        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
+        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        errorLine1="            convertView = mInflater.inflate(R.layout.afc_file_item, null);"
+        errorLine2="                                                                    ~~~~">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/java/group/pals/android/lib/ui/filechooser/IFileAdapter.java"
+            line="252"
+            column="69"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        severity="Warning"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        category="Correctness"
+        priority="5"
+        summary="Layout Inflation without a Parent"
+        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
+        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        errorLine1="            convertView = LayoutInflater.from(mContext).inflate(R.layout.afc_context_menu_tiem, null);"
+        errorLine2="                                                                                                ~~~~">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/java/group/pals/android/lib/ui/filechooser/utils/ui/MenuItemAdapter.java"
+            line="67"
+            column="97"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        severity="Warning"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        category="Correctness"
+        priority="5"
+        summary="Layout Inflation without a Parent"
+        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
+        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        errorLine1="        ListView listView = (ListView) LayoutInflater.from(context).inflate(R.layout.afc_listview_files, null);"
+        errorLine2="                                                                                                         ~~~~">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/java/group/pals/android/lib/ui/filechooser/utils/ui/ViewFilesContextMenuUtils.java"
+            line="85"
+            column="106"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="The targetSdkVersion (15) should not be higher than the compileSdkVersion (14)"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    compileSdkVersion 14"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/build.gradle"
+            line="4"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="GradleOverrides"
+        severity="Warning"
+        message="This `minSdkVersion` value (`5`) is not used; it is always overridden by the value specified in the Gradle build script (`11`)"
+        category="Correctness"
+        priority="4"
+        summary="Value overridden by Gradle build script"
+        explanation="The value of (for example) `minSdkVersion` is only used if it is not specified in the `build.gradle` build scripts. When specified in the Gradle build scripts, the manifest value is ignored and can be misleading, so should be removed to avoid ambiguity."
+        errorLine1="        android:minSdkVersion=&quot;5&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/AndroidManifest.xml"
+            line="15"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="GradleOverrides"
+        severity="Warning"
+        message="This `targetSdkVersion` value (`15`) is not used; it is always overridden by the value specified in the Gradle build script (`15`)"
+        category="Correctness"
+        priority="4"
+        summary="Value overridden by Gradle build script"
+        explanation="The value of (for example) `minSdkVersion` is only used if it is not specified in the `build.gradle` build scripts. When specified in the Gradle build scripts, the manifest value is ignored and can be misleading, so should be removed to avoid ambiguity."
+        errorLine1="        android:targetSdkVersion=&quot;15&quot; />"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/AndroidManifest.xml"
+            line="16"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="PluralsCandidate"
+        severity="Warning"
+        message="Formatting %d followed by words (&quot;items&quot;): This should probably be a plural rather than a string"
+        category="Correctness:Messages"
+        priority="5"
+        summary="Potential Plurals"
+        explanation="This lint check looks for potential errors in internationalization where you have translated a message which involves a quantity and it looks like other parts of the string may need grammatical changes.
+
+For example, rather than something like this:
+  &lt;string name=&quot;try_again&quot;>Try again in %d seconds.&lt;/string>
+you should be using a plural:
+   &lt;plurals name=&quot;try_again&quot;>
+        &lt;item quantity=&quot;one&quot;>Try again in %d second&lt;/item>
+        &lt;item quantity=&quot;other&quot;>Try again in %d seconds&lt;/item>
+    &lt;/plurals>
+This will ensure that in other languages the right set of translations are provided for the different quantity classes.
+
+(This check depends on some heuristics, so it may not accurately determine whether a string really should be a quantity. You can use tools:ignore to filter out false positives."
+        url="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        urls="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        errorLine1="    &lt;string name=&quot;afc_pmsg_xxx_items&quot;>%1$,d items&lt;/string>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values/strings.xml"
+            line="50"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.afc_ic_menu_gridview` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/drawable-hdpi/afc_ic_menu_gridview.png"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/drawable-hdpi-v11/afc_ic_menu_gridview.png"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/drawable-ldpi/afc_ic_menu_gridview.png"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/drawable-ldpi-v11/afc_ic_menu_gridview.png"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/drawable-mdpi/afc_ic_menu_gridview.png"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/drawable-mdpi-v11/afc_ic_menu_gridview.png"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/drawable-xhdpi/afc_ic_menu_gridview.png"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/drawable-xhdpi-v11/afc_ic_menu_gridview.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.afc_ic_menu_listview` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/drawable-hdpi/afc_ic_menu_listview.png"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/drawable-hdpi-v11/afc_ic_menu_listview.png"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/drawable-ldpi/afc_ic_menu_listview.png"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/drawable-ldpi-v11/afc_ic_menu_listview.png"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/drawable-mdpi/afc_ic_menu_listview.png"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/drawable-mdpi-v11/afc_ic_menu_listview.png"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/drawable-xhdpi/afc_ic_menu_listview.png"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/drawable-xhdpi-v11/afc_ic_menu_listview.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.dimen.afc_15dp` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;dimen name=&quot;afc_15dp&quot;>15dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values/dimens.xml"
+            line="12"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.afc_cmd_grid_view` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;afc_cmd_grid_view&quot;>Grid view&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values/strings.xml"
+            line="16"
+            column="13"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values-es/strings.xml"
+            line="20"
+            column="13"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values-ru/strings.xml"
+            line="15"
+            column="13"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values-vi/strings.xml"
+            line="15"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.afc_cmd_list_view` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;afc_cmd_list_view&quot;>List view&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values/strings.xml"
+            line="18"
+            column="13"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values-es/strings.xml"
+            line="22"
+            column="13"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values-ru/strings.xml"
+            line="17"
+            column="13"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values-vi/strings.xml"
+            line="17"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.afc_cmd_new_folder` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;afc_cmd_new_folder&quot;>New folder…&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values/strings.xml"
+            line="19"
+            column="13"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values-es/strings.xml"
+            line="23"
+            column="13"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values-ru/strings.xml"
+            line="18"
+            column="13"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values-vi/strings.xml"
+            line="18"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.afc_cmd_remove_from_list` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;afc_cmd_remove_from_list&quot;>Remove from list&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values/strings.xml"
+            line="21"
+            column="13"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values-es/strings.xml"
+            line="25"
+            column="13"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values-ru/strings.xml"
+            line="20"
+            column="13"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values-vi/strings.xml"
+            line="20"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.afc_cmd_sort` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;afc_cmd_sort&quot;>Sort…&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values/strings.xml"
+            line="24"
+            column="13"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values-es/strings.xml"
+            line="28"
+            column="13"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values-ru/strings.xml"
+            line="23"
+            column="13"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values-vi/strings.xml"
+            line="23"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.afc_hint_folder_name` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;afc_hint_folder_name&quot;>folder name&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values/strings.xml"
+            line="29"
+            column="13"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values-es/strings.xml"
+            line="33"
+            column="13"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values-ru/strings.xml"
+            line="28"
+            column="13"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values-vi/strings.xml"
+            line="28"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.afc_pmsg_cannot_access_dir` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;afc_pmsg_cannot_access_dir&quot;>Can not access \&quot;%1$s\&quot;&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values/strings.xml"
+            line="39"
+            column="13"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values-es/strings.xml"
+            line="43"
+            column="13"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values-ru/strings.xml"
+            line="38"
+            column="13"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values-vi/strings.xml"
+            line="38"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.afc_pmsg_xxx_items` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;afc_pmsg_xxx_items&quot;>%1$,d items&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values/strings.xml"
+            line="50"
+            column="13"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values-es/strings.xml"
+            line="54"
+            column="13"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values-ru/strings.xml"
+            line="49"
+            column="13"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values-vi/strings.xml"
+            line="49"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.afc_root` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;afc_root&quot;>Root&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values/strings.xml"
+            line="51"
+            column="13"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values-es/strings.xml"
+            line="55"
+            column="13"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values-ru/strings.xml"
+            line="50"
+            column="13"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values-vi/strings.xml"
+            line="65"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.afc_title_alert` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;afc_title_alert&quot;>Alert&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values/strings.xml"
+            line="53"
+            column="13"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values-es/strings.xml"
+            line="57"
+            column="13"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values-ru/strings.xml"
+            line="52"
+            column="13"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values-vi/strings.xml"
+            line="51"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.afc_title_choose_directories` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;afc_title_choose_directories&quot;>Choose folders…&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values/strings.xml"
+            line="54"
+            column="13"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values-es/strings.xml"
+            line="58"
+            column="13"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values-ru/strings.xml"
+            line="53"
+            column="13"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values-vi/strings.xml"
+            line="52"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.afc_title_choose_files` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;afc_title_choose_files&quot;>Choose files…&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values/strings.xml"
+            line="55"
+            column="13"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values-es/strings.xml"
+            line="59"
+            column="13"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values-ru/strings.xml"
+            line="54"
+            column="13"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values-vi/strings.xml"
+            line="53"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.afc_title_choose_files_and_directories` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;afc_title_choose_files_and_directories&quot;>Choose files/ folders…&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values/strings.xml"
+            line="56"
+            column="13"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values-es/strings.xml"
+            line="60"
+            column="13"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values-ru/strings.xml"
+            line="55"
+            column="13"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values-vi/strings.xml"
+            line="54"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.afc_title_save_as` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;afc_title_save_as&quot;>Save as…&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values/strings.xml"
+            line="63"
+            column="13"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values-es/strings.xml"
+            line="67"
+            column="13"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values-ru/strings.xml"
+            line="62"
+            column="13"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values-vi/strings.xml"
+            line="61"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.afc_title_sort_by` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;afc_title_sort_by&quot;>Sort by…&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values/strings.xml"
+            line="65"
+            column="13"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values-es/strings.xml"
+            line="69"
+            column="13"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values-ru/strings.xml"
+            line="64"
+            column="13"/>
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/values-vi/strings.xml"
+            line="63"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UselessParent"
+        severity="Warning"
+        message="This `RelativeLayout` layout or its `RelativeLayout` parent is possibly useless"
+        category="Performance"
+        priority="2"
+        summary="Useless parent layout"
+        explanation="A layout with children that has no siblings, is not a scrollview or a root layout, and does not have a background, can be removed and have its children moved directly into the parent for a flatter and more efficient layout hierarchy."
+        errorLine1="        &lt;RelativeLayout"
+        errorLine2="        ^"
+        quickfix="adt">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/layout-v11/afc_file_chooser.xml"
+            line="19"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="UselessParent"
+        severity="Warning"
+        message="This `TableLayout` layout or its `RelativeLayout` parent is useless"
+        category="Performance"
+        priority="2"
+        summary="Useless parent layout"
+        explanation="A layout with children that has no siblings, is not a scrollview or a root layout, and does not have a background, can be removed and have its children moved directly into the parent for a flatter and more efficient layout hierarchy."
+        errorLine1="    &lt;TableLayout"
+        errorLine2="    ^"
+        quickfix="adt">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/layout-v11/afc_settings_sort_view.xml"
+            line="13"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="IconDensities"
+        severity="Warning"
+        message="Missing the following drawables in `drawable-mdpi`: afc_button_sort_as.png, afc_button_sort_as_disabled.png, afc_button_sort_as_pressed.png, afc_button_sort_de.png, afc_button_sort_de_disabled.png... (1 more)"
+        category="Usability:Icons"
+        priority="4"
+        summary="Icon densities validation"
+        explanation="Icons will look best if a custom version is provided for each of the major screen density classes (low, medium, high, extra high). This lint check identifies icons which do not have complete coverage across the densities.
+
+Low density is not really used much anymore, so this check ignores the ldpi density. To force lint to include it, set the environment variable `ANDROID_LINT_INCLUDE_LDPI=true`. For more information on current density usage, see http://developer.android.com/resources/dashboard/screens.html"
+        url="http://developer.android.com/guide/practices/screens_support.html"
+        urls="http://developer.android.com/guide/practices/screens_support.html">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/drawable-mdpi"/>
+    </issue>
+
+    <issue
+        id="IconDensities"
+        severity="Warning"
+        message="Missing the following drawables in `drawable-xhdpi`: afc_button_sort_as.png, afc_button_sort_as_disabled.png, afc_button_sort_as_pressed.png, afc_button_sort_de.png, afc_button_sort_de_disabled.png... (1 more)"
+        category="Usability:Icons"
+        priority="4"
+        summary="Icon densities validation"
+        explanation="Icons will look best if a custom version is provided for each of the major screen density classes (low, medium, high, extra high). This lint check identifies icons which do not have complete coverage across the densities.
+
+Low density is not really used much anymore, so this check ignores the ldpi density. To force lint to include it, set the environment variable `ANDROID_LINT_INCLUDE_LDPI=true`. For more information on current density usage, see http://developer.android.com/resources/dashboard/screens.html"
+        url="http://developer.android.com/guide/practices/screens_support.html"
+        urls="http://developer.android.com/guide/practices/screens_support.html">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/drawable-xhdpi"/>
+    </issue>
+
+    <issue
+        id="IconMissingDensityFolder"
+        severity="Warning"
+        message="Missing density variation folders in `src/main/res`: drawable-xxhdpi, drawable-xxxhdpi"
+        category="Usability:Icons"
+        priority="3"
+        summary="Missing density folder"
+        explanation="Icons will look best if a custom version is provided for each of the major screen density classes (low, medium, high, extra-high, extra-extra-high). This lint check identifies folders which are missing, such as `drawable-hdpi`.
+Low density is not really used much anymore, so this check ignores the ldpi density. To force lint to include it, set the environment variable `ANDROID_LINT_INCLUDE_LDPI=true`. For more information on current density usage, see http://developer.android.com/resources/dashboard/screens.html"
+        url="http://developer.android.com/guide/practices/screens_support.html"
+        urls="http://developer.android.com/guide/practices/screens_support.html">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res"/>
+    </issue>
+
+    <issue
+        id="ButtonOrder"
+        severity="Warning"
+        message="Layout uses the wrong button order for API >= 14: Create a `layout-v14/afc_file_chooser.xml` file with opposite order: Cancel button should be on the left (was &quot;Ok | Cancel&quot;, should be &quot;Cancel | Ok&quot;)"
+        category="Usability"
+        priority="8"
+        summary="Button order"
+        explanation="According to the Android Design Guide,
+
+&quot;Action buttons are typically Cancel and/or OK, with OK indicating the preferred or most likely action. However, if the options consist of specific actions such as Close or Wait rather than a confirmation or cancellation of the action described in the content, then all the buttons should be active verbs. As a rule, the dismissive action of a dialog is always on the left whereas the affirmative actions are on the right.&quot;
+
+This check looks for button bars and buttons which look like cancel buttons, and makes sure that these are on the left."
+        url="http://developer.android.com/design/building-blocks/dialogs.html"
+        urls="http://developer.android.com/design/building-blocks/dialogs.html"
+        errorLine1="            &lt;Button"
+        errorLine2="            ^">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/layout/afc_file_chooser.xml"
+            line="198"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ButtonOrder"
+        severity="Warning"
+        message="Layout uses the wrong button order for API >= 14: Create a `layout-v14/afc_file_chooser.xml` file with opposite order: Cancel button should be on the left (was &quot;Ok | Cancel&quot;, should be &quot;Cancel | Ok&quot;)"
+        category="Usability"
+        priority="8"
+        summary="Button order"
+        explanation="According to the Android Design Guide,
+
+&quot;Action buttons are typically Cancel and/or OK, with OK indicating the preferred or most likely action. However, if the options consist of specific actions such as Close or Wait rather than a confirmation or cancellation of the action described in the content, then all the buttons should be active verbs. As a rule, the dismissive action of a dialog is always on the left whereas the affirmative actions are on the right.&quot;
+
+This check looks for button bars and buttons which look like cancel buttons, and makes sure that these are on the left."
+        url="http://developer.android.com/design/building-blocks/dialogs.html"
+        urls="http://developer.android.com/design/building-blocks/dialogs.html"
+        errorLine1="            &lt;Button"
+        errorLine2="            ^">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/layout-v11/afc_file_chooser.xml"
+            line="201"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="TextFields"
+        severity="Warning"
+        message="This text field does not specify an `inputType` or a `hint`"
+        category="Usability"
+        priority="5"
+        summary="Missing `inputType` or `hint`"
+        explanation="Providing an `inputType` attribute on a text field improves usability because depending on the data to be input, optimized keyboards can be shown to the user (such as just digits and parentheses for a phone number). Similarly,a hint attribute displays a hint to the user for what is expected in the text field.
+
+The lint detector also looks at the `id` of the view, and if the id offers a hint of the purpose of the field (for example, the `id` contains the phrase `phone` or `email`), then lint will also ensure that the `inputType` contains the corresponding type attributes.
+
+If you really want to keep the text field generic, you can suppress this warning by setting `inputType=&quot;text&quot;`."
+        errorLine1="    &lt;EditText"
+        errorLine2="    ^"
+        quickfix="studio,adt">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/layout/afc_simple_text_input_view.xml"
+            line="14"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="ClickableViewAccessibility"
+        severity="Warning"
+        message="`group/pals/android/lib/ui/filechooser/FileChooserActivity$5#onTouch` should call `View#performClick` when a click is detected"
+        category="Accessibility"
+        priority="6"
+        summary="Accessibility in Custom Views"
+        explanation="If a `View` that overrides `onTouchEvent` or uses an `OnTouchListener` does not also implement `performClick` and call it when clicks are detected, the `View` may not handle accessibility actions properly. Logic handling the click actions should ideally be placed in `View#performClick` as some accessibility services invoke `performClick` when a click action should occur."
+        errorLine1="            public boolean onTouch(View v, MotionEvent event) {"
+        errorLine2="                           ~~~~~~~">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/java/group/pals/android/lib/ui/filechooser/FileChooserActivity.java"
+            line="727"
+            column="28"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        severity="Warning"
+        message="[Accessibility] Missing `contentDescription` attribute on image"
+        category="Accessibility"
+        priority="3"
+        summary="Image without `contentDescription`"
+        explanation="Non-textual widgets like ImageViews and ImageButtons should use the `contentDescription` attribute to specify a textual description of the widget such that screen readers and other accessibility tools can adequately describe the user interface.
+
+Note that elements in application screens that are purely decorative and do not provide any content or enable a user action should not have accessibility content descriptions. In this case, just suppress the lint warning with a tools:ignore=&quot;ContentDescription&quot; attribute.
+
+Note that for text fields, you should not set both the `hint` and the `contentDescription` attributes since the hint will never be shown. Just set the `hint`. See http://developer.android.com/guide/topics/ui/accessibility/checklist.html#special-cases."
+        errorLine1="                    &lt;ImageView"
+        errorLine2="                    ^"
+        quickfix="studio,adt">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/layout-v11/afc_file_chooser.xml"
+            line="55"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        severity="Warning"
+        message="[Accessibility] Missing `contentDescription` attribute on image"
+        category="Accessibility"
+        priority="3"
+        summary="Image without `contentDescription`"
+        explanation="Non-textual widgets like ImageViews and ImageButtons should use the `contentDescription` attribute to specify a textual description of the widget such that screen readers and other accessibility tools can adequately describe the user interface.
+
+Note that elements in application screens that are purely decorative and do not provide any content or enable a user action should not have accessibility content descriptions. In this case, just suppress the lint warning with a tools:ignore=&quot;ContentDescription&quot; attribute.
+
+Note that for text fields, you should not set both the `hint` and the `contentDescription` attributes since the hint will never be shown. Just set the `hint`. See http://developer.android.com/guide/topics/ui/accessibility/checklist.html#special-cases."
+        errorLine1="                    &lt;ImageView"
+        errorLine2="                    ^"
+        quickfix="studio,adt">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/layout-v11/afc_file_chooser.xml"
+            line="58"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        severity="Warning"
+        message="[Accessibility] Missing `contentDescription` attribute on image"
+        category="Accessibility"
+        priority="3"
+        summary="Image without `contentDescription`"
+        explanation="Non-textual widgets like ImageViews and ImageButtons should use the `contentDescription` attribute to specify a textual description of the widget such that screen readers and other accessibility tools can adequately describe the user interface.
+
+Note that elements in application screens that are purely decorative and do not provide any content or enable a user action should not have accessibility content descriptions. In this case, just suppress the lint warning with a tools:ignore=&quot;ContentDescription&quot; attribute.
+
+Note that for text fields, you should not set both the `hint` and the `contentDescription` attributes since the hint will never be shown. Just set the `hint`. See http://developer.android.com/guide/topics/ui/accessibility/checklist.html#special-cases."
+        errorLine1="                    &lt;ImageView"
+        errorLine2="                    ^"
+        quickfix="studio,adt">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/layout-v11/afc_file_chooser.xml"
+            line="69"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        severity="Warning"
+        message="[Accessibility] Missing `contentDescription` attribute on image"
+        category="Accessibility"
+        priority="3"
+        summary="Image without `contentDescription`"
+        explanation="Non-textual widgets like ImageViews and ImageButtons should use the `contentDescription` attribute to specify a textual description of the widget such that screen readers and other accessibility tools can adequately describe the user interface.
+
+Note that elements in application screens that are purely decorative and do not provide any content or enable a user action should not have accessibility content descriptions. In this case, just suppress the lint warning with a tools:ignore=&quot;ContentDescription&quot; attribute.
+
+Note that for text fields, you should not set both the `hint` and the `contentDescription` attributes since the hint will never be shown. Just set the `hint`. See http://developer.android.com/guide/topics/ui/accessibility/checklist.html#special-cases."
+        errorLine1="                    &lt;ImageView"
+        errorLine2="                    ^"
+        quickfix="studio,adt">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/layout-v11/afc_file_chooser.xml"
+            line="72"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        severity="Warning"
+        message="[Accessibility] Missing `contentDescription` attribute on image"
+        category="Accessibility"
+        priority="3"
+        summary="Image without `contentDescription`"
+        explanation="Non-textual widgets like ImageViews and ImageButtons should use the `contentDescription` attribute to specify a textual description of the widget such that screen readers and other accessibility tools can adequately describe the user interface.
+
+Note that elements in application screens that are purely decorative and do not provide any content or enable a user action should not have accessibility content descriptions. In this case, just suppress the lint warning with a tools:ignore=&quot;ContentDescription&quot; attribute.
+
+Note that for text fields, you should not set both the `hint` and the `contentDescription` attributes since the hint will never be shown. Just set the `hint`. See http://developer.android.com/guide/topics/ui/accessibility/checklist.html#special-cases."
+        errorLine1="                    &lt;ImageView"
+        errorLine2="                    ^"
+        quickfix="studio,adt">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/layout-v11/afc_file_chooser.xml"
+            line="76"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        severity="Warning"
+        message="[Accessibility] Missing `contentDescription` attribute on image"
+        category="Accessibility"
+        priority="3"
+        summary="Image without `contentDescription`"
+        explanation="Non-textual widgets like ImageViews and ImageButtons should use the `contentDescription` attribute to specify a textual description of the widget such that screen readers and other accessibility tools can adequately describe the user interface.
+
+Note that elements in application screens that are purely decorative and do not provide any content or enable a user action should not have accessibility content descriptions. In this case, just suppress the lint warning with a tools:ignore=&quot;ContentDescription&quot; attribute.
+
+Note that for text fields, you should not set both the `hint` and the `contentDescription` attributes since the hint will never be shown. Just set the `hint`. See http://developer.android.com/guide/topics/ui/accessibility/checklist.html#special-cases."
+        errorLine1="    &lt;ImageView"
+        errorLine2="    ^"
+        quickfix="studio,adt">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/layout/afc_file_item.xml"
+            line="14"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;Ok&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="                android:text=&quot;Ok&quot;    "
+        errorLine2="                ~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/layout/afc_file_chooser.xml"
+            line="196"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;Ok&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="                android:text=&quot;Ok&quot;    "
+        errorLine2="                ~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/layout-v11/afc_file_chooser.xml"
+            line="199"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;Cancel&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="                android:text=&quot;Cancel&quot;    "
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/layout/afc_file_chooser.xml"
+            line="206"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;Cancel&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="                android:text=&quot;Cancel&quot;    "
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/Volumes/Development/artatech/device/FBReaderJ/code/src/main/res/layout-v11/afc_file_chooser.xml"
+            line="209"
+            column="17"/>
+    </issue>
+
+</issues>

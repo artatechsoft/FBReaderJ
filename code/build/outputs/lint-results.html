@@ -1,0 +1,1235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Lint Report</title>
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto" />
+<link rel="stylesheet" type="text/css" href="lint-results_files/hololike.css" />
+<script language="javascript" type="text/javascript"> 
+<!--
+function reveal(id) {
+if (document.getElementById) {
+document.getElementById(id).style.display = 'block';
+document.getElementById(id+'Link').style.display = 'none';
+}
+}
+//--> 
+</script>
+</head>
+<body>
+<h1>Lint Report</h1>
+<div class="titleSeparator"></div>
+Check performed at Wed Jun 10 12:05:41 CEST 2015.<br/>
+0 errors and 53 warnings found:<br/><br/>
+<table class="overview">
+<tr><td></td><td class="categoryColumn"><a href="#Correctness">Correctness</a>
+</td></tr>
+<tr>
+<td class="countColumn">1</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#InconsistentLayout">InconsistentLayout: Inconsistent Layouts</a>
+</td></tr>
+<tr>
+<td class="countColumn">1</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#InlinedApi">InlinedApi: Using inlined constants on older versions</a>
+</td></tr>
+<tr>
+<td class="countColumn">2</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#OldTargetApi">OldTargetApi: Target SDK attribute is not targeting latest version</a>
+</td></tr>
+<tr>
+<td class="countColumn">8</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#InflateParams">InflateParams: Layout Inflation without a Parent</a>
+</td></tr>
+<tr>
+<td class="countColumn">1</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#GradleDependency">GradleDependency: Obsolete Gradle Dependency</a>
+</td></tr>
+<tr>
+<td class="countColumn">2</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#GradleOverrides">GradleOverrides: Value overridden by Gradle build script</a>
+</td></tr>
+<tr><td></td><td class="categoryColumn"><a href="#Correctness:Messages">Correctness:Messages</a>
+</td></tr>
+<tr>
+<td class="countColumn">1</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#PluralsCandidate">PluralsCandidate: Potential Plurals</a>
+</td></tr>
+<tr><td></td><td class="categoryColumn"><a href="#Performance">Performance</a>
+</td></tr>
+<tr>
+<td class="countColumn">18</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#UnusedResources">UnusedResources: Unused resources</a>
+</td></tr>
+<tr>
+<td class="countColumn">2</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#UselessParent">UselessParent: Useless parent layout</a>
+</td></tr>
+<tr><td></td><td class="categoryColumn"><a href="#Usability:Icons">Usability:Icons</a>
+</td></tr>
+<tr>
+<td class="countColumn">2</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#IconDensities">IconDensities: Icon densities validation</a>
+</td></tr>
+<tr>
+<td class="countColumn">1</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#IconMissingDensityFolder">IconMissingDensityFolder: Missing density folder</a>
+</td></tr>
+<tr><td></td><td class="categoryColumn"><a href="#Usability">Usability</a>
+</td></tr>
+<tr>
+<td class="countColumn">2</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#ButtonOrder">ButtonOrder: Button order</a>
+</td></tr>
+<tr>
+<td class="countColumn">1</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#TextFields">TextFields: Missing <code>inputType</code> or <code>hint</code></a>
+</td></tr>
+<tr><td></td><td class="categoryColumn"><a href="#Accessibility">Accessibility</a>
+</td></tr>
+<tr>
+<td class="countColumn">1</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#ClickableViewAccessibility">ClickableViewAccessibility: Accessibility in Custom Views</a>
+</td></tr>
+<tr>
+<td class="countColumn">6</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#ContentDescription">ContentDescription: Image without <code>contentDescription</code></a>
+</td></tr>
+<tr><td></td><td class="categoryColumn"><a href="#Internationalization">Internationalization</a>
+</td></tr>
+<tr>
+<td class="countColumn">4</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#HardcodedText">HardcodedText: Hardcoded text</a>
+</td></tr>
+<tr><td></td><td class="categoryColumn"><a href="#MissingIssues">Disabled Checks (11)</a>
+</td></tr></table>
+<br/>
+<a name="Correctness"></a>
+<div class="category"><a href="#" title="Return to top">Correctness</a><div class="categorySeparator"></div>
+</div>
+<a name="InconsistentLayout"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">InconsistentLayout: Inconsistent Layouts</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../src/main/res/layout-v11/afc_file_chooser.xml">../../src/main/res/layout-v11/afc_file_chooser.xml</a>:151</span>: <span class="message">The id "afc_filechooser_activity_viewgroup_footer2" in layout "afc_file_chooser" is missing from the following layout configurations: layout (present in layout-v11)</span><br /><pre class="errorlines">
+<span class="lineno"> 148</span>             android:layout_height="@dimen/afc_viewgroup_button_locations_bottom_divider_height" />
+<span class="lineno"> 149</span> 
+<span class="lineno"> 150</span>         &lt;LinearLayout
+<span class="lineno"> 151</span>             <span class="errorspan">android:id="@+id/afc_filechooser_activity_viewgroup_footer2"</span>
+<span class="lineno"> 152</span>             style="?android:attr/buttonBarStyle"
+<span class="lineno"> 153</span>             android:layout_width="match_parent"
+</pre>
+</div>
+<div class="metadata">Priority: 6 / 10<br/>
+Category: Correctness</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Inconsistent Layouts.</div>
+<div class="explanation">
+This check ensures that a layout resource which is defined in multiple resource folders, specifies the same set of widgets.<br/>
+<br/>
+This finds cases where you have accidentally forgotten to add a widget to all variations of the layout, which could result in a runtime crash for some resource configurations when a <code>findViewById()</code> fails.<br/>
+<br/>
+There <b>are</b> cases where this is intentional. For example, you may have a dedicated large tablet layout which adds some extra widgets that are not present in the phone version of the layout. As long as the code accessing the layout resource is careful to handle this properly, it is valid. In that case, you can suppress this lint check for the given extra or missing views, or the whole layout
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "InconsistentLayout" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="InlinedApi"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">InlinedApi: Using inlined constants on older versions</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../src/main/java/group/pals/android/lib/ui/filechooser/FileChooserActivity.java">../../src/main/java/group/pals/android/lib/ui/filechooser/FileChooserActivity.java</a>:315</span>: <span class="message">Field requires API level 14 (current min is 11): <code>android.R.style#Theme_DeviceDefault</code></span><br /><pre class="errorlines">
+<span class="lineno"> 312</span>         if (getIntent().hasExtra(_Theme)) {
+<span class="lineno"> 313</span>             int theme;
+<span class="lineno"> 314</span>             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH)
+<span class="lineno"> 315</span>                 theme = getIntent().getIntExtra(_Theme, <span class="errorspan">android.R.style.Theme_DeviceDefault);</span>
+<span class="lineno"> 316</span>             else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
+<span class="lineno"> 317</span>                 theme = getIntent().getIntExtra(_Theme, android.R.style.Theme_Holo);
+</pre>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Eclipse/ADT & Android Studio/IntelliJ&nbsp;<img alt="Fix" border="0" align="top" src="lint-results_files/lint-run.png" />
+<br>
+Priority: 6 / 10<br/>
+Category: Correctness</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Using inlined constants on older versions.</div>
+<div class="explanation">
+This check scans through all the Android API field references in the application and flags certain constants, such as static final integers and Strings, which were introduced in later versions. These will actually be copied into the class files rather than being referenced, which means that the value is available even when running on older devices. In some cases that's fine, and in other cases it can result in a runtime crash or incorrect behavior. It depends on the context, so consider the code carefully and device whether it's safe and can be suppressed or whether the code needs tbe guarded.<br/>
+<br/>
+If you really want to use this API and don't need to support older devices just set the <code>minSdkVersion</code> in your <code>build.gradle</code> or <code>AndroidManifest.xml</code> files.<br/>
+If your code is <b>deliberately</b> accessing newer APIs, and you have ensured (e.g. with conditional execution) that this code will only ever be called on a supported platform, then you can annotate your class or method with the <code>@TargetApi</code> annotation specifying the local minimum SDK to apply, such as <code>@TargetApi(11)</code>, such that this check considers 11 rather than your manifest file's minimum SDK as the required API level.<br/>
+
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "InlinedApi" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="OldTargetApi"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">OldTargetApi: Target SDK attribute is not targeting latest version</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../src/main/AndroidManifest.xml">../../src/main/AndroidManifest.xml</a>:16</span>: <span class="message">Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the <code>android.os.Build.VERSION_CODES</code> javadoc for details.</span><br /><pre class="errorlines">
+<span class="lineno">  13</span> 
+<span class="lineno">  14</span>     &lt;uses-sdk
+<span class="lineno">  15</span>         android:minSdkVersion="5"
+<span class="lineno">  16</span>         <span class="errorspan">android:targetSdkVersion="15" /></span>
+<span class="lineno">  17</span> 
+<span class="lineno">  18</span> &lt;/manifest>
+</pre>
+<span class="location"><a href="../../build.gradle">../../build.gradle</a>:9</span>: <span class="message">Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details.</span><br /><pre class="errorlines">
+<span class="lineno">   6</span> 
+<span class="lineno">   7</span>     defaultConfig {
+<span class="lineno">   8</span>         minSdkVersion 11
+<span class="lineno">   9</span>         <span class="errorspan">targetSdkVersion 15</span>
+<span class="lineno">  10</span>     }
+<span class="lineno">  11</span> 
+</pre>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Android Studio/IntelliJ&nbsp;<img alt="Fix" border="0" align="top" src="lint-results_files/lint-run.png" />
+<br>
+Priority: 6 / 10<br/>
+Category: Correctness</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Target SDK attribute is not targeting latest version.</div>
+<div class="explanation">
+When your application runs on a version of Android that is more recent than your <code>targetSdkVersion</code> specifies that it has been tested with, various compatibility modes kick in. This ensures that your application continues to work, but it may look out of place. For example, if the <code>targetSdkVersion</code> is less than 14, your app may get an option button in the UI.<br/>
+<br/>
+To fix this issue, set the <code>targetSdkVersion</code> to the highest available value. Then test your app to make sure everything works correctly. You may want to consult the compatibility notes to see what changes apply to each version you are adding support for: <a href="http://developer.android.com/reference/android/os/Build.VERSION_CODES.html">http://developer.android.com/reference/android/os/Build.VERSION_CODES.html</a>
+</div>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/reference/android/os/Build.VERSION_CODES.html">http://developer.android.com/reference/android/os/Build.VERSION_CODES.html</a>
+</div><br/>To suppress this error, use the issue id "OldTargetApi" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="InflateParams"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">InflateParams: Layout Inflation without a Parent</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../src/main/java/group/pals/android/lib/ui/filechooser/utils/ui/ContextMenuUtils.java">../../src/main/java/group/pals/android/lib/ui/filechooser/utils/ui/ContextMenuUtils.java</a>:46</span>: <span class="message">Avoid passing <code>null</code> as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
+<span class="lineno">  43</span>             final OnMenuItemClickListener listener) {
+<span class="lineno">  44</span>         final MenuItemAdapter _adapter = new MenuItemAdapter(context, itemIds);
+<span class="lineno">  45</span> 
+<span class="lineno">  46</span>         View view = LayoutInflater.from(context).inflate(R.layout.afc_context_menu_view, <span class="errorspan">null);</span>
+<span class="lineno">  47</span>         ListView listview = (ListView) view.findViewById(R.id.afc_context_menu_view_listview_menu);
+<span class="lineno">  48</span>         listview.setAdapter(_adapter);
+</pre>
+<span class="location"><a href="../../src/main/java/group/pals/android/lib/ui/filechooser/FileChooserActivity.java">../../src/main/java/group/pals/android/lib/ui/filechooser/FileChooserActivity.java</a>:711</span>: <span class="message">Avoid passing <code>null</code> as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
+<span class="lineno"> 708</span>     private void setupViewFiles() {
+<span class="lineno"> 709</span>         switch (DisplayPrefs.getViewType(this)) {
+<span class="lineno"> 710</span>         case Grid:
+<span class="lineno"> 711</span>             mViewFiles = (AbsListView) getLayoutInflater().inflate(R.layout.afc_gridview_files, <span class="errorspan">null);</span>
+<span class="lineno"> 712</span>             break;
+<span class="lineno"> 713</span>         case List:
+</pre>
+<span class="location"><a href="../../src/main/java/group/pals/android/lib/ui/filechooser/FileChooserActivity.java">../../src/main/java/group/pals/android/lib/ui/filechooser/FileChooserActivity.java</a>:714</span>: <span class="message">Avoid passing <code>null</code> as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
+<span class="lineno"> 711</span>             mViewFiles = (AbsListView) getLayoutInflater().inflate(R.layout.afc_gridview_files, null);
+<span class="lineno"> 712</span>             break;
+<span class="lineno"> 713</span>         case List:
+<span class="lineno"> 714</span>             mViewFiles = (AbsListView) getLayoutInflater().inflate(R.layout.afc_listview_files, <span class="errorspan">null);</span>
+<span class="lineno"> 715</span>             break;
+<span class="lineno"> 716</span>         }
+</pre>
+<span class="location"><a href="../../src/main/java/group/pals/android/lib/ui/filechooser/FileChooserActivity.java">../../src/main/java/group/pals/android/lib/ui/filechooser/FileChooserActivity.java</a>:914</span>: <span class="message">Avoid passing <code>null</code> as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
+<span class="lineno"> 911</span>             }// onClick()
+<span class="lineno"> 912</span>         };// listener
+<span class="lineno"> 913</span> 
+<span class="lineno"> 914</span>         View view = getLayoutInflater().inflate(R.layout.afc_settings_sort_view, <span class="errorspan">null);</span>
+<span class="lineno"> 915</span>         TextView sortTitle = (TextView) view.findViewById(R.id.afc_settings_sort_view_textview_sort_by_name);
+<span class="lineno"> 916</span>         sortTitle.setText(mTextResources.get("sortByName"));
+</pre>
+<span class="location"><a href="../../src/main/java/group/pals/android/lib/ui/filechooser/FileChooserActivity.java">../../src/main/java/group/pals/android/lib/ui/filechooser/FileChooserActivity.java</a>:1013</span>: <span class="message">Avoid passing <code>null</code> as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
+<span class="lineno">1010</span> 
+<span class="lineno">1011</span>         final AlertDialog _dlg = Dlg.newDlg(this);
+<span class="lineno">1012</span> 
+<span class="lineno">1013</span>         View view = getLayoutInflater().inflate(R.layout.afc_simple_text_input_view, <span class="errorspan">null);</span>
+<span class="lineno">1014</span>         final EditText _textFile = (EditText) view.findViewById(R.id.afc_simple_text_input_view_text1);
+<span class="lineno">1015</span>         _textFile.setHint(mTextResources.get("folderNameHint"));
+</pre>
+<span class="location"><a href="../../src/main/java/group/pals/android/lib/ui/filechooser/IFileAdapter.java">../../src/main/java/group/pals/android/lib/ui/filechooser/IFileAdapter.java</a>:252</span>: <span class="message">Avoid passing <code>null</code> as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
+<span class="lineno"> 249</span>         Bag bag;
+<span class="lineno"> 250</span> 
+<span class="lineno"> 251</span>         if (convertView == null) {
+<span class="lineno"> 252</span>             convertView = mInflater.inflate(R.layout.afc_file_item, <span class="errorspan">null);</span>
+<span class="lineno"> 253</span> 
+<span class="lineno"> 254</span>             bag = new Bag();
+</pre>
+<span class="location"><a href="../../src/main/java/group/pals/android/lib/ui/filechooser/utils/ui/MenuItemAdapter.java">../../src/main/java/group/pals/android/lib/ui/filechooser/utils/ui/MenuItemAdapter.java</a>:67</span>: <span class="message">Avoid passing <code>null</code> as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
+<span class="lineno">  64</span>     @Override
+<span class="lineno">  65</span>     public View getView(int position, View convertView, ViewGroup parent) {
+<span class="lineno">  66</span>         if (convertView == null) {
+<span class="lineno">  67</span>             convertView = LayoutInflater.from(mContext).inflate(R.layout.afc_context_menu_tiem, <span class="errorspan">null);</span>
+<span class="lineno">  68</span>         }
+<span class="lineno">  69</span> 
+</pre>
+<span class="location"><a href="../../src/main/java/group/pals/android/lib/ui/filechooser/utils/ui/ViewFilesContextMenuUtils.java">../../src/main/java/group/pals/android/lib/ui/filechooser/utils/ui/ViewFilesContextMenuUtils.java</a>:85</span>: <span class="message">Avoid passing <code>null</code> as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
+<span class="lineno">  82</span> 
+<span class="lineno">  83</span>         final IFileAdapter _adapter = new IFileAdapter(context, data, FilterMode.DirectoriesOnly, null, false);
+<span class="lineno">  84</span> 
+<span class="lineno">  85</span>         ListView listView = (ListView) LayoutInflater.from(context).inflate(R.layout.afc_listview_files, <span class="errorspan">null);</span>
+<span class="lineno">  86</span>         listView.setBackgroundResource(0);
+<span class="lineno">  87</span>         listView.setFastScrollEnabled(true);
+</pre>
+</div>
+<div class="metadata">Priority: 5 / 10<br/>
+Category: Correctness</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Layout Inflation without a Parent.</div>
+<div class="explanation">
+When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored.
+</div>
+<br/><div class="moreinfo">More info: <a href="http://www.doubleencore.com/2013/05/layout-inflation-as-intended">http://www.doubleencore.com/2013/05/layout-inflation-as-intended</a>
+</div><br/>To suppress this error, use the issue id "InflateParams" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="GradleDependency"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">GradleDependency: Obsolete Gradle Dependency</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../build.gradle">../../build.gradle</a>:4</span>: <span class="message">The targetSdkVersion (15) should not be higher than the compileSdkVersion (14)</span><br /><pre class="errorlines">
+<span class="lineno">   1</span> apply plugin: 'com.android.library'
+<span class="lineno">   2</span> 
+<span class="lineno">   3</span> android {
+<span class="lineno">   4</span>     <span class="errorspan">compileSdkVersion 14</span>
+<span class="lineno">   5</span>     buildToolsVersion "22.0.1"
+<span class="lineno">   6</span> 
+</pre>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Android Studio/IntelliJ&nbsp;<img alt="Fix" border="0" align="top" src="lint-results_files/lint-run.png" />
+<br>
+Priority: 4 / 10<br/>
+Category: Correctness</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Obsolete Gradle Dependency.</div>
+<div class="explanation">
+This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "GradleDependency" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="GradleOverrides"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">GradleOverrides: Value overridden by Gradle build script</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../src/main/AndroidManifest.xml">../../src/main/AndroidManifest.xml</a>:15</span>: <span class="message">This <code>minSdkVersion</code> value (<code>5</code>) is not used; it is always overridden by the value specified in the Gradle build script (<code>11</code>)</span><br /><pre class="errorlines">
+<span class="lineno">  12</span>     android:versionName="5.0" >
+<span class="lineno">  13</span> 
+<span class="lineno">  14</span>     &lt;uses-sdk
+<span class="lineno">  15</span>         <span class="errorspan">android:minSdkVersion="5"</span>
+<span class="lineno">  16</span>         android:targetSdkVersion="15" />
+<span class="lineno">  17</span> 
+</pre>
+<span class="location"><a href="../../src/main/AndroidManifest.xml">../../src/main/AndroidManifest.xml</a>:16</span>: <span class="message">This <code>targetSdkVersion</code> value (<code>15</code>) is not used; it is always overridden by the value specified in the Gradle build script (<code>15</code>)</span><br /><pre class="errorlines">
+<span class="lineno">  13</span> 
+<span class="lineno">  14</span>     &lt;uses-sdk
+<span class="lineno">  15</span>         android:minSdkVersion="5"
+<span class="lineno">  16</span>         <span class="errorspan">android:targetSdkVersion="15" /></span>
+<span class="lineno">  17</span> 
+<span class="lineno">  18</span> &lt;/manifest>
+</pre>
+</div>
+<div class="metadata">Priority: 4 / 10<br/>
+Category: Correctness</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Value overridden by Gradle build script.</div>
+<div class="explanation">
+The value of (for example) <code>minSdkVersion</code> is only used if it is not specified in the <code>build.gradle</code> build scripts. When specified in the Gradle build scripts, the manifest value is ignored and can be misleading, so should be removed to avoid ambiguity.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "GradleOverrides" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+
+<a name="Correctness:Messages"></a>
+<div class="category"><a href="#" title="Return to top">Correctness:Messages</a><div class="categorySeparator"></div>
+</div>
+<a name="PluralsCandidate"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">PluralsCandidate: Potential Plurals</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:50</span>: <span class="message">Formatting %d followed by words ("items"): This should probably be a plural rather than a string</span><br /><pre class="errorlines">
+<span class="lineno">  47</span>     &lt;string name="afc_pmsg_filename_is_invalid">File name \"%1$s\" is invalid&lt;/string>
+<span class="lineno">  48</span>     &lt;string name="afc_pmsg_max_file_count_allowed">&#8230;has more files, max allowed: %1$,d&lt;/string>
+<span class="lineno">  49</span>     &lt;string name="afc_pmsg_unknown_error">Unknown error: %1$s&lt;/string>
+<span class="lineno">  50</span>     <span class="errorspan">&lt;string name="afc_pmsg_xxx_items">%1$,d items&lt;/string></span>
+<span class="lineno">  51</span>     &lt;string name="afc_root">Root&lt;/string>
+<span class="lineno">  52</span>     &lt;string name="afc_title_advanced_selection">Select&#8230;&lt;/string>
+</pre>
+</div>
+<div class="metadata">Priority: 5 / 10<br/>
+Category: Correctness:Messages</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Potential Plurals.</div>
+<div class="explanation">
+This lint check looks for potential errors in internationalization where you have translated a message which involves a quantity and it looks like other parts of the string may need grammatical changes.<br/>
+<br/>
+For example, rather than something like this:<br/>
+  &lt;string name="try_again">Try again in %d seconds.&lt;/string><br/>
+you should be using a plural:<br/>
+   &lt;plurals name="try_again"><br/>
+        &lt;item quantity="one">Try again in %d second&lt;/item><br/>
+        &lt;item quantity="other">Try again in %d seconds&lt;/item><br/>
+    &lt;/plurals><br/>
+This will ensure that in other languages the right set of translations are provided for the different quantity classes.<br/>
+<br/>
+(This check depends on some heuristics, so it may not accurately determine whether a string really should be a quantity. You can use tools:ignore to filter out false positives.
+</div>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals">http://developer.android.com/guide/topics/resources/string-resource.html#Plurals</a>
+</div><br/>To suppress this error, use the issue id "PluralsCandidate" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+
+<a name="Performance"></a>
+<div class="category"><a href="#" title="Return to top">Performance</a><div class="categorySeparator"></div>
+</div>
+<a name="UnusedResources"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">UnusedResources: Unused resources</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../src/main/res/drawable-hdpi/afc_ic_menu_gridview.png">../../src/main/res/drawable-hdpi/afc_ic_menu_gridview.png</a></span>: <span class="message">The resource <code>R.drawable.afc_ic_menu_gridview</code> appears to be unused</span><br />
+<ul></ul><button id="Location1DivLink" onclick="reveal('Location1Div');" />+ 7 Additional Locations...</button>
+<div id="Location1Div" style="display: none">
+Additional locations: <ul>
+<li> <span class="location"><a href="../../src/main/res/drawable-hdpi-v11/afc_ic_menu_gridview.png">../../src/main/res/drawable-hdpi-v11/afc_ic_menu_gridview.png</a></span>
+<li> <span class="location"><a href="../../src/main/res/drawable-ldpi/afc_ic_menu_gridview.png">../../src/main/res/drawable-ldpi/afc_ic_menu_gridview.png</a></span>
+<li> <span class="location"><a href="../../src/main/res/drawable-ldpi-v11/afc_ic_menu_gridview.png">../../src/main/res/drawable-ldpi-v11/afc_ic_menu_gridview.png</a></span>
+<li> <span class="location"><a href="../../src/main/res/drawable-mdpi/afc_ic_menu_gridview.png">../../src/main/res/drawable-mdpi/afc_ic_menu_gridview.png</a></span>
+<li> <span class="location"><a href="../../src/main/res/drawable-mdpi-v11/afc_ic_menu_gridview.png">../../src/main/res/drawable-mdpi-v11/afc_ic_menu_gridview.png</a></span>
+<li> <span class="location"><a href="../../src/main/res/drawable-xhdpi/afc_ic_menu_gridview.png">../../src/main/res/drawable-xhdpi/afc_ic_menu_gridview.png</a></span>
+<li> <span class="location"><a href="../../src/main/res/drawable-xhdpi-v11/afc_ic_menu_gridview.png">../../src/main/res/drawable-xhdpi-v11/afc_ic_menu_gridview.png</a></span>
+</ul>
+</div><br/><br/>
+<table><tr><td><a href="../../src/main/res/drawable-xhdpi/afc_ic_menu_gridview.png"><img border="0" align="top" src="../../src/main/res/drawable-xhdpi/afc_ic_menu_gridview.png" /></a>
+</td><td><a href="../../src/main/res/drawable-xhdpi-v11/afc_ic_menu_gridview.png"><img border="0" align="top" src="../../src/main/res/drawable-xhdpi-v11/afc_ic_menu_gridview.png" /></a>
+</td><td><a href="../../src/main/res/drawable-hdpi/afc_ic_menu_gridview.png"><img border="0" align="top" src="../../src/main/res/drawable-hdpi/afc_ic_menu_gridview.png" /></a>
+</td><td><a href="../../src/main/res/drawable-hdpi-v11/afc_ic_menu_gridview.png"><img border="0" align="top" src="../../src/main/res/drawable-hdpi-v11/afc_ic_menu_gridview.png" /></a>
+</td><td><a href="../../src/main/res/drawable-mdpi/afc_ic_menu_gridview.png"><img border="0" align="top" src="../../src/main/res/drawable-mdpi/afc_ic_menu_gridview.png" /></a>
+</td><td><a href="../../src/main/res/drawable-mdpi-v11/afc_ic_menu_gridview.png"><img border="0" align="top" src="../../src/main/res/drawable-mdpi-v11/afc_ic_menu_gridview.png" /></a>
+</td><td><a href="../../src/main/res/drawable-ldpi/afc_ic_menu_gridview.png"><img border="0" align="top" src="../../src/main/res/drawable-ldpi/afc_ic_menu_gridview.png" /></a>
+</td><td><a href="../../src/main/res/drawable-ldpi-v11/afc_ic_menu_gridview.png"><img border="0" align="top" src="../../src/main/res/drawable-ldpi-v11/afc_ic_menu_gridview.png" /></a>
+</td></tr><tr><th>xhdpi</th><th>xhdpi-v11</th><th>hdpi</th><th>hdpi-v11</th><th>mdpi</th><th>mdpi-v11</th><th>ldpi</th><th>ldpi-v11</th></tr>
+</table>
+<span class="location"><a href="../../src/main/res/drawable-hdpi/afc_ic_menu_listview.png">../../src/main/res/drawable-hdpi/afc_ic_menu_listview.png</a></span>: <span class="message">The resource <code>R.drawable.afc_ic_menu_listview</code> appears to be unused</span><br />
+<ul></ul><button id="Location2DivLink" onclick="reveal('Location2Div');" />+ 7 Additional Locations...</button>
+<div id="Location2Div" style="display: none">
+Additional locations: <ul>
+<li> <span class="location"><a href="../../src/main/res/drawable-hdpi-v11/afc_ic_menu_listview.png">../../src/main/res/drawable-hdpi-v11/afc_ic_menu_listview.png</a></span>
+<li> <span class="location"><a href="../../src/main/res/drawable-ldpi/afc_ic_menu_listview.png">../../src/main/res/drawable-ldpi/afc_ic_menu_listview.png</a></span>
+<li> <span class="location"><a href="../../src/main/res/drawable-ldpi-v11/afc_ic_menu_listview.png">../../src/main/res/drawable-ldpi-v11/afc_ic_menu_listview.png</a></span>
+<li> <span class="location"><a href="../../src/main/res/drawable-mdpi/afc_ic_menu_listview.png">../../src/main/res/drawable-mdpi/afc_ic_menu_listview.png</a></span>
+<li> <span class="location"><a href="../../src/main/res/drawable-mdpi-v11/afc_ic_menu_listview.png">../../src/main/res/drawable-mdpi-v11/afc_ic_menu_listview.png</a></span>
+<li> <span class="location"><a href="../../src/main/res/drawable-xhdpi/afc_ic_menu_listview.png">../../src/main/res/drawable-xhdpi/afc_ic_menu_listview.png</a></span>
+<li> <span class="location"><a href="../../src/main/res/drawable-xhdpi-v11/afc_ic_menu_listview.png">../../src/main/res/drawable-xhdpi-v11/afc_ic_menu_listview.png</a></span>
+</ul>
+</div><br/><br/>
+<table><tr><td><a href="../../src/main/res/drawable-xhdpi/afc_ic_menu_listview.png"><img border="0" align="top" src="../../src/main/res/drawable-xhdpi/afc_ic_menu_listview.png" /></a>
+</td><td><a href="../../src/main/res/drawable-xhdpi-v11/afc_ic_menu_listview.png"><img border="0" align="top" src="../../src/main/res/drawable-xhdpi-v11/afc_ic_menu_listview.png" /></a>
+</td><td><a href="../../src/main/res/drawable-hdpi/afc_ic_menu_listview.png"><img border="0" align="top" src="../../src/main/res/drawable-hdpi/afc_ic_menu_listview.png" /></a>
+</td><td><a href="../../src/main/res/drawable-hdpi-v11/afc_ic_menu_listview.png"><img border="0" align="top" src="../../src/main/res/drawable-hdpi-v11/afc_ic_menu_listview.png" /></a>
+</td><td><a href="../../src/main/res/drawable-mdpi/afc_ic_menu_listview.png"><img border="0" align="top" src="../../src/main/res/drawable-mdpi/afc_ic_menu_listview.png" /></a>
+</td><td><a href="../../src/main/res/drawable-mdpi-v11/afc_ic_menu_listview.png"><img border="0" align="top" src="../../src/main/res/drawable-mdpi-v11/afc_ic_menu_listview.png" /></a>
+</td><td><a href="../../src/main/res/drawable-ldpi/afc_ic_menu_listview.png"><img border="0" align="top" src="../../src/main/res/drawable-ldpi/afc_ic_menu_listview.png" /></a>
+</td><td><a href="../../src/main/res/drawable-ldpi-v11/afc_ic_menu_listview.png"><img border="0" align="top" src="../../src/main/res/drawable-ldpi-v11/afc_ic_menu_listview.png" /></a>
+</td></tr><tr><th>xhdpi</th><th>xhdpi-v11</th><th>hdpi</th><th>hdpi-v11</th><th>mdpi</th><th>mdpi-v11</th><th>ldpi</th><th>ldpi-v11</th></tr>
+</table>
+<span class="location"><a href="../../src/main/res/values/dimens.xml">../../src/main/res/values/dimens.xml</a>:12</span>: <span class="message">The resource <code>R.dimen.afc_15dp</code> appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">   9</span> &lt;resources>
+<span class="lineno">  10</span> 
+<span class="lineno">  11</span>     &lt;dimen name="afc_30dp">30dp&lt;/dimen>
+<span class="lineno">  12</span>     &lt;dimen <span class="errorspan">name="afc_15dp">15dp&lt;/dimen></span>
+<span class="lineno">  13</span>     &lt;dimen name="afc_10dp">10dp&lt;/dimen>
+<span class="lineno">  14</span>     &lt;dimen name="afc_5dp">5dp&lt;/dimen>
+</pre>
+<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:16</span>: <span class="message">The resource <code>R.string.afc_cmd_grid_view</code> appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">  13</span>     &lt;string name="afc_cmd_advanced_selection_invert">Invert selection&lt;/string>
+<span class="lineno">  14</span>     &lt;string name="afc_cmd_advanced_selection_none">None&lt;/string>
+<span class="lineno">  15</span>     &lt;string name="afc_cmd_clear">Clear&lt;/string>
+<span class="lineno">  16</span>     &lt;string <span class="errorspan">name="afc_cmd_grid_view">Grid view&lt;/string></span>
+<span class="lineno">  17</span>     &lt;string name="afc_cmd_home">Home&lt;/string>
+<span class="lineno">  18</span>     &lt;string name="afc_cmd_list_view">List view&lt;/string>
+</pre>
+<ul></ul><button id="Location4DivLink" onclick="reveal('Location4Div');" />+ 3 Additional Locations...</button>
+<div id="Location4Div" style="display: none">
+Additional locations: <ul>
+<li> <span class="location"><a href="../../src/main/res/values-es/strings.xml">../../src/main/res/values-es/strings.xml</a>:20</span>
+<li> <span class="location"><a href="../../src/main/res/values-ru/strings.xml">../../src/main/res/values-ru/strings.xml</a>:15</span>
+<li> <span class="location"><a href="../../src/main/res/values-vi/strings.xml">../../src/main/res/values-vi/strings.xml</a>:15</span>
+</ul>
+</div><br/><br/>
+<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:18</span>: <span class="message">The resource <code>R.string.afc_cmd_list_view</code> appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">  15</span>     &lt;string name="afc_cmd_clear">Clear&lt;/string>
+<span class="lineno">  16</span>     &lt;string name="afc_cmd_grid_view">Grid view&lt;/string>
+<span class="lineno">  17</span>     &lt;string name="afc_cmd_home">Home&lt;/string>
+<span class="lineno">  18</span>     &lt;string <span class="errorspan">name="afc_cmd_list_view">List view&lt;/string></span>
+<span class="lineno">  19</span>     &lt;string name="afc_cmd_new_folder">New folder&#8230;&lt;/string>
+<span class="lineno">  20</span>     &lt;string name="afc_cmd_reload">Reload&lt;/string>
+</pre>
+<ul></ul><button id="Location5DivLink" onclick="reveal('Location5Div');" />+ 3 Additional Locations...</button>
+<div id="Location5Div" style="display: none">
+Additional locations: <ul>
+<li> <span class="location"><a href="../../src/main/res/values-es/strings.xml">../../src/main/res/values-es/strings.xml</a>:22</span>
+<li> <span class="location"><a href="../../src/main/res/values-ru/strings.xml">../../src/main/res/values-ru/strings.xml</a>:17</span>
+<li> <span class="location"><a href="../../src/main/res/values-vi/strings.xml">../../src/main/res/values-vi/strings.xml</a>:17</span>
+</ul>
+</div><br/><br/>
+<button id="UnusedResourcesDivLink" onclick="reveal('UnusedResourcesDiv');" />+ 13 More Occurrences...</button>
+<div id="UnusedResourcesDiv" style="display: none">
+<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:19</span>: <span class="message">The resource <code>R.string.afc_cmd_new_folder</code> appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">  16</span>     &lt;string name="afc_cmd_grid_view">Grid view&lt;/string>
+<span class="lineno">  17</span>     &lt;string name="afc_cmd_home">Home&lt;/string>
+<span class="lineno">  18</span>     &lt;string name="afc_cmd_list_view">List view&lt;/string>
+<span class="lineno">  19</span>     &lt;string <span class="errorspan">name="afc_cmd_new_folder">New folder&#8230;&lt;/string></span>
+<span class="lineno">  20</span>     &lt;string name="afc_cmd_reload">Reload&lt;/string>
+<span class="lineno">  21</span>     &lt;string name="afc_cmd_remove_from_list">Remove from list&lt;/string>
+</pre>
+<ul></ul><button id="Location6DivLink" onclick="reveal('Location6Div');" />+ 3 Additional Locations...</button>
+<div id="Location6Div" style="display: none">
+Additional locations: <ul>
+<li> <span class="location"><a href="../../src/main/res/values-es/strings.xml">../../src/main/res/values-es/strings.xml</a>:23</span>
+<li> <span class="location"><a href="../../src/main/res/values-ru/strings.xml">../../src/main/res/values-ru/strings.xml</a>:18</span>
+<li> <span class="location"><a href="../../src/main/res/values-vi/strings.xml">../../src/main/res/values-vi/strings.xml</a>:18</span>
+</ul>
+</div><br/><br/>
+<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:21</span>: <span class="message">The resource <code>R.string.afc_cmd_remove_from_list</code> appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">  18</span>     &lt;string name="afc_cmd_list_view">List view&lt;/string>
+<span class="lineno">  19</span>     &lt;string name="afc_cmd_new_folder">New folder&#8230;&lt;/string>
+<span class="lineno">  20</span>     &lt;string name="afc_cmd_reload">Reload&lt;/string>
+<span class="lineno">  21</span>     &lt;string <span class="errorspan">name="afc_cmd_remove_from_list">Remove from list&lt;/string></span>
+<span class="lineno">  22</span>     &lt;string name="afc_cmd_select_all_files">Select all files&lt;/string>
+<span class="lineno">  23</span>     &lt;string name="afc_cmd_select_all_folders">Select all folders&lt;/string>
+</pre>
+<ul></ul><button id="Location7DivLink" onclick="reveal('Location7Div');" />+ 3 Additional Locations...</button>
+<div id="Location7Div" style="display: none">
+Additional locations: <ul>
+<li> <span class="location"><a href="../../src/main/res/values-es/strings.xml">../../src/main/res/values-es/strings.xml</a>:25</span>
+<li> <span class="location"><a href="../../src/main/res/values-ru/strings.xml">../../src/main/res/values-ru/strings.xml</a>:20</span>
+<li> <span class="location"><a href="../../src/main/res/values-vi/strings.xml">../../src/main/res/values-vi/strings.xml</a>:20</span>
+</ul>
+</div><br/><br/>
+<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:24</span>: <span class="message">The resource <code>R.string.afc_cmd_sort</code> appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">  21</span>     &lt;string name="afc_cmd_remove_from_list">Remove from list&lt;/string>
+<span class="lineno">  22</span>     &lt;string name="afc_cmd_select_all_files">Select all files&lt;/string>
+<span class="lineno">  23</span>     &lt;string name="afc_cmd_select_all_folders">Select all folders&lt;/string>
+<span class="lineno">  24</span>     &lt;string <span class="errorspan">name="afc_cmd_sort">Sort&#8230;&lt;/string></span>
+<span class="lineno">  25</span>     &lt;string name="afc_ellipsize">&#8230;&lt;/string>
+<span class="lineno">  26</span>     &lt;string name="afc_file">file&lt;/string>
+</pre>
+<ul></ul><button id="Location8DivLink" onclick="reveal('Location8Div');" />+ 3 Additional Locations...</button>
+<div id="Location8Div" style="display: none">
+Additional locations: <ul>
+<li> <span class="location"><a href="../../src/main/res/values-es/strings.xml">../../src/main/res/values-es/strings.xml</a>:28</span>
+<li> <span class="location"><a href="../../src/main/res/values-ru/strings.xml">../../src/main/res/values-ru/strings.xml</a>:23</span>
+<li> <span class="location"><a href="../../src/main/res/values-vi/strings.xml">../../src/main/res/values-vi/strings.xml</a>:23</span>
+</ul>
+</div><br/><br/>
+<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:29</span>: <span class="message">The resource <code>R.string.afc_hint_folder_name</code> appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">  26</span>     &lt;string name="afc_file">file&lt;/string>
+<span class="lineno">  27</span>     &lt;string name="afc_folder">folder&lt;/string>
+<span class="lineno">  28</span>     &lt;string name="afc_hint_double_tap_to_select_file">Double tap to select file/ folder&lt;/string>
+<span class="lineno">  29</span>     &lt;string <span class="errorspan">name="afc_hint_folder_name">folder name&lt;/string></span>
+<span class="lineno">  30</span>     &lt;string name="afc_hint_save_as_filename">filename&lt;/string>
+<span class="lineno">  31</span>     &lt;string name="afc_msg_app_doesnot_have_permission_to_create_files">This application does not have permission to create files/ folders&lt;/string>
+</pre>
+<ul></ul><button id="Location9DivLink" onclick="reveal('Location9Div');" />+ 3 Additional Locations...</button>
+<div id="Location9Div" style="display: none">
+Additional locations: <ul>
+<li> <span class="location"><a href="../../src/main/res/values-es/strings.xml">../../src/main/res/values-es/strings.xml</a>:33</span>
+<li> <span class="location"><a href="../../src/main/res/values-ru/strings.xml">../../src/main/res/values-ru/strings.xml</a>:28</span>
+<li> <span class="location"><a href="../../src/main/res/values-vi/strings.xml">../../src/main/res/values-vi/strings.xml</a>:28</span>
+</ul>
+</div><br/><br/>
+<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:39</span>: <span class="message">The resource <code>R.string.afc_pmsg_cannot_access_dir</code> appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">  36</span>     &lt;string name="afc_msg_empty">&#8230;empty&lt;/string>
+<span class="lineno">  37</span>     &lt;string name="afc_msg_filename_is_empty">Filename is empty&lt;/string>
+<span class="lineno">  38</span>     &lt;string name="afc_msg_loading">Loading&#8230;&lt;/string>
+<span class="lineno">  39</span>     &lt;string <span class="errorspan">name="afc_pmsg_cannot_access_dir">Can not access \"%1$s\"&lt;/string></span>
+<span class="lineno">  40</span>     &lt;string name="afc_pmsg_cannot_create_folder">Can not create folder \"%1$s\"&lt;/string>
+<span class="lineno">  41</span>     &lt;string name="afc_pmsg_cannot_delete_file">Can not delete %1$s \"%2$s\"&lt;/string>
+</pre>
+<ul></ul><button id="Location10DivLink" onclick="reveal('Location10Div');" />+ 3 Additional Locations...</button>
+<div id="Location10Div" style="display: none">
+Additional locations: <ul>
+<li> <span class="location"><a href="../../src/main/res/values-es/strings.xml">../../src/main/res/values-es/strings.xml</a>:43</span>
+<li> <span class="location"><a href="../../src/main/res/values-ru/strings.xml">../../src/main/res/values-ru/strings.xml</a>:38</span>
+<li> <span class="location"><a href="../../src/main/res/values-vi/strings.xml">../../src/main/res/values-vi/strings.xml</a>:38</span>
+</ul>
+</div><br/><br/>
+<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:50</span>: <span class="message">The resource <code>R.string.afc_pmsg_xxx_items</code> appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">  47</span>     &lt;string name="afc_pmsg_filename_is_invalid">File name \"%1$s\" is invalid&lt;/string>
+<span class="lineno">  48</span>     &lt;string name="afc_pmsg_max_file_count_allowed">&#8230;has more files, max allowed: %1$,d&lt;/string>
+<span class="lineno">  49</span>     &lt;string name="afc_pmsg_unknown_error">Unknown error: %1$s&lt;/string>
+<span class="lineno">  50</span>     &lt;string <span class="errorspan">name="afc_pmsg_xxx_items">%1$,d items&lt;/string></span>
+<span class="lineno">  51</span>     &lt;string name="afc_root">Root&lt;/string>
+<span class="lineno">  52</span>     &lt;string name="afc_title_advanced_selection">Select&#8230;&lt;/string>
+</pre>
+<ul></ul><button id="Location11DivLink" onclick="reveal('Location11Div');" />+ 3 Additional Locations...</button>
+<div id="Location11Div" style="display: none">
+Additional locations: <ul>
+<li> <span class="location"><a href="../../src/main/res/values-es/strings.xml">../../src/main/res/values-es/strings.xml</a>:54</span>
+<li> <span class="location"><a href="../../src/main/res/values-ru/strings.xml">../../src/main/res/values-ru/strings.xml</a>:49</span>
+<li> <span class="location"><a href="../../src/main/res/values-vi/strings.xml">../../src/main/res/values-vi/strings.xml</a>:49</span>
+</ul>
+</div><br/><br/>
+<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:51</span>: <span class="message">The resource <code>R.string.afc_root</code> appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">  48</span>     &lt;string name="afc_pmsg_max_file_count_allowed">&#8230;has more files, max allowed: %1$,d&lt;/string>
+<span class="lineno">  49</span>     &lt;string name="afc_pmsg_unknown_error">Unknown error: %1$s&lt;/string>
+<span class="lineno">  50</span>     &lt;string name="afc_pmsg_xxx_items">%1$,d items&lt;/string>
+<span class="lineno">  51</span>     &lt;string <span class="errorspan">name="afc_root">Root&lt;/string></span>
+<span class="lineno">  52</span>     &lt;string name="afc_title_advanced_selection">Select&#8230;&lt;/string>
+<span class="lineno">  53</span>     &lt;string name="afc_title_alert">Alert&lt;/string>
+</pre>
+<ul></ul><button id="Location12DivLink" onclick="reveal('Location12Div');" />+ 3 Additional Locations...</button>
+<div id="Location12Div" style="display: none">
+Additional locations: <ul>
+<li> <span class="location"><a href="../../src/main/res/values-es/strings.xml">../../src/main/res/values-es/strings.xml</a>:55</span>
+<li> <span class="location"><a href="../../src/main/res/values-ru/strings.xml">../../src/main/res/values-ru/strings.xml</a>:50</span>
+<li> <span class="location"><a href="../../src/main/res/values-vi/strings.xml">../../src/main/res/values-vi/strings.xml</a>:65</span>
+</ul>
+</div><br/><br/>
+<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:53</span>: <span class="message">The resource <code>R.string.afc_title_alert</code> appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">  50</span>     &lt;string name="afc_pmsg_xxx_items">%1$,d items&lt;/string>
+<span class="lineno">  51</span>     &lt;string name="afc_root">Root&lt;/string>
+<span class="lineno">  52</span>     &lt;string name="afc_title_advanced_selection">Select&#8230;&lt;/string>
+<span class="lineno">  53</span>     &lt;string <span class="errorspan">name="afc_title_alert">Alert&lt;/string></span>
+<span class="lineno">  54</span>     &lt;string name="afc_title_choose_directories">Choose folders&#8230;&lt;/string>
+<span class="lineno">  55</span>     &lt;string name="afc_title_choose_files">Choose files&#8230;&lt;/string>
+</pre>
+<ul></ul><button id="Location13DivLink" onclick="reveal('Location13Div');" />+ 3 Additional Locations...</button>
+<div id="Location13Div" style="display: none">
+Additional locations: <ul>
+<li> <span class="location"><a href="../../src/main/res/values-es/strings.xml">../../src/main/res/values-es/strings.xml</a>:57</span>
+<li> <span class="location"><a href="../../src/main/res/values-ru/strings.xml">../../src/main/res/values-ru/strings.xml</a>:52</span>
+<li> <span class="location"><a href="../../src/main/res/values-vi/strings.xml">../../src/main/res/values-vi/strings.xml</a>:51</span>
+</ul>
+</div><br/><br/>
+<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:54</span>: <span class="message">The resource <code>R.string.afc_title_choose_directories</code> appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">  51</span>     &lt;string name="afc_root">Root&lt;/string>
+<span class="lineno">  52</span>     &lt;string name="afc_title_advanced_selection">Select&#8230;&lt;/string>
+<span class="lineno">  53</span>     &lt;string name="afc_title_alert">Alert&lt;/string>
+<span class="lineno">  54</span>     &lt;string <span class="errorspan">name="afc_title_choose_directories">Choose folders&#8230;&lt;/string></span>
+<span class="lineno">  55</span>     &lt;string name="afc_title_choose_files">Choose files&#8230;&lt;/string>
+<span class="lineno">  56</span>     &lt;string name="afc_title_choose_files_and_directories">Choose files/ folders&#8230;&lt;/string>
+</pre>
+<ul></ul><button id="Location14DivLink" onclick="reveal('Location14Div');" />+ 3 Additional Locations...</button>
+<div id="Location14Div" style="display: none">
+Additional locations: <ul>
+<li> <span class="location"><a href="../../src/main/res/values-es/strings.xml">../../src/main/res/values-es/strings.xml</a>:58</span>
+<li> <span class="location"><a href="../../src/main/res/values-ru/strings.xml">../../src/main/res/values-ru/strings.xml</a>:53</span>
+<li> <span class="location"><a href="../../src/main/res/values-vi/strings.xml">../../src/main/res/values-vi/strings.xml</a>:52</span>
+</ul>
+</div><br/><br/>
+<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:55</span>: <span class="message">The resource <code>R.string.afc_title_choose_files</code> appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">  52</span>     &lt;string name="afc_title_advanced_selection">Select&#8230;&lt;/string>
+<span class="lineno">  53</span>     &lt;string name="afc_title_alert">Alert&lt;/string>
+<span class="lineno">  54</span>     &lt;string name="afc_title_choose_directories">Choose folders&#8230;&lt;/string>
+<span class="lineno">  55</span>     &lt;string <span class="errorspan">name="afc_title_choose_files">Choose files&#8230;&lt;/string></span>
+<span class="lineno">  56</span>     &lt;string name="afc_title_choose_files_and_directories">Choose files/ folders&#8230;&lt;/string>
+<span class="lineno">  57</span>     &lt;string name="afc_title_confirmation">Confirmation&lt;/string>
+</pre>
+<ul></ul><button id="Location15DivLink" onclick="reveal('Location15Div');" />+ 3 Additional Locations...</button>
+<div id="Location15Div" style="display: none">
+Additional locations: <ul>
+<li> <span class="location"><a href="../../src/main/res/values-es/strings.xml">../../src/main/res/values-es/strings.xml</a>:59</span>
+<li> <span class="location"><a href="../../src/main/res/values-ru/strings.xml">../../src/main/res/values-ru/strings.xml</a>:54</span>
+<li> <span class="location"><a href="../../src/main/res/values-vi/strings.xml">../../src/main/res/values-vi/strings.xml</a>:53</span>
+</ul>
+</div><br/><br/>
+<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:56</span>: <span class="message">The resource <code>R.string.afc_title_choose_files_and_directories</code> appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">  53</span>     &lt;string name="afc_title_alert">Alert&lt;/string>
+<span class="lineno">  54</span>     &lt;string name="afc_title_choose_directories">Choose folders&#8230;&lt;/string>
+<span class="lineno">  55</span>     &lt;string name="afc_title_choose_files">Choose files&#8230;&lt;/string>
+<span class="lineno">  56</span>     &lt;string <span class="errorspan">name="afc_title_choose_files_and_directories">Choose files/ folders&#8230;&lt;/string></span>
+<span class="lineno">  57</span>     &lt;string name="afc_title_confirmation">Confirmation&lt;/string>
+<span class="lineno">  58</span>     &lt;string name="afc_title_date">Date&lt;/string>
+</pre>
+<ul></ul><button id="Location16DivLink" onclick="reveal('Location16Div');" />+ 3 Additional Locations...</button>
+<div id="Location16Div" style="display: none">
+Additional locations: <ul>
+<li> <span class="location"><a href="../../src/main/res/values-es/strings.xml">../../src/main/res/values-es/strings.xml</a>:60</span>
+<li> <span class="location"><a href="../../src/main/res/values-ru/strings.xml">../../src/main/res/values-ru/strings.xml</a>:55</span>
+<li> <span class="location"><a href="../../src/main/res/values-vi/strings.xml">../../src/main/res/values-vi/strings.xml</a>:54</span>
+</ul>
+</div><br/><br/>
+<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:63</span>: <span class="message">The resource <code>R.string.afc_title_save_as</code> appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">  60</span>     &lt;string name="afc_title_history">History&lt;/string>
+<span class="lineno">  61</span>     &lt;string name="afc_title_info">Info&lt;/string>
+<span class="lineno">  62</span>     &lt;string name="afc_title_name">Name&lt;/string>
+<span class="lineno">  63</span>     &lt;string <span class="errorspan">name="afc_title_save_as">Save as&#8230;&lt;/string></span>
+<span class="lineno">  64</span>     &lt;string name="afc_title_size">Size&lt;/string>
+<span class="lineno">  65</span>     &lt;string name="afc_title_sort_by">Sort by&#8230;&lt;/string>
+</pre>
+<ul></ul><button id="Location17DivLink" onclick="reveal('Location17Div');" />+ 3 Additional Locations...</button>
+<div id="Location17Div" style="display: none">
+Additional locations: <ul>
+<li> <span class="location"><a href="../../src/main/res/values-es/strings.xml">../../src/main/res/values-es/strings.xml</a>:67</span>
+<li> <span class="location"><a href="../../src/main/res/values-ru/strings.xml">../../src/main/res/values-ru/strings.xml</a>:62</span>
+<li> <span class="location"><a href="../../src/main/res/values-vi/strings.xml">../../src/main/res/values-vi/strings.xml</a>:61</span>
+</ul>
+</div><br/><br/>
+<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:65</span>: <span class="message">The resource <code>R.string.afc_title_sort_by</code> appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">  62</span>     &lt;string name="afc_title_name">Name&lt;/string>
+<span class="lineno">  63</span>     &lt;string name="afc_title_save_as">Save as&#8230;&lt;/string>
+<span class="lineno">  64</span>     &lt;string name="afc_title_size">Size&lt;/string>
+<span class="lineno">  65</span>     &lt;string <span class="errorspan">name="afc_title_sort_by">Sort by&#8230;&lt;/string></span>
+<span class="lineno">  66</span>     &lt;string name="afc_yesterday">Yesterday&lt;/string>
+<span class="lineno">  67</span>     &lt;string name="afc_msg_app_cant_create_folder" translatable="false">Can\'t create folder in this directory&lt;/string>
+</pre>
+<ul></ul><button id="Location18DivLink" onclick="reveal('Location18Div');" />+ 3 Additional Locations...</button>
+<div id="Location18Div" style="display: none">
+Additional locations: <ul>
+<li> <span class="location"><a href="../../src/main/res/values-es/strings.xml">../../src/main/res/values-es/strings.xml</a>:69</span>
+<li> <span class="location"><a href="../../src/main/res/values-ru/strings.xml">../../src/main/res/values-ru/strings.xml</a>:64</span>
+<li> <span class="location"><a href="../../src/main/res/values-vi/strings.xml">../../src/main/res/values-vi/strings.xml</a>:63</span>
+</ul>
+</div><br/><br/>
+</div>
+</div>
+<div class="metadata">Priority: 3 / 10<br/>
+Category: Performance</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Unused resources.</div>
+<div class="explanation">
+Unused resources make applications larger and slow down builds.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "UnusedResources" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="UselessParent"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">UselessParent: Useless parent layout</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../src/main/res/layout-v11/afc_file_chooser.xml">../../src/main/res/layout-v11/afc_file_chooser.xml</a>:19</span>: <span class="message">This <code>RelativeLayout</code> layout or its <code>RelativeLayout</code> parent is possibly useless</span><br /><pre class="errorlines">
+<span class="lineno">  16</span>         android:layout_height="wrap_content"
+<span class="lineno">  17</span>         android:layout_alignParentTop="true" >
+<span class="lineno">  18</span>         
+<span class="lineno">  19</span>         <span class="errorspan">&lt;RelativeLayout</span>
+<span class="lineno">  20</span>             android:id="@+id/afc_filechooser_activity_viewgroup_button_locations"
+<span class="lineno">  21</span>             android:layout_width="match_parent"
+</pre>
+<span class="location"><a href="../../src/main/res/layout-v11/afc_settings_sort_view.xml">../../src/main/res/layout-v11/afc_settings_sort_view.xml</a>:13</span>: <span class="message">This <code>TableLayout</code> layout or its <code>RelativeLayout</code> parent is useless</span><br /><pre class="errorlines">
+<span class="lineno">  10</span>     android:layout_width="match_parent"
+<span class="lineno">  11</span>     android:layout_height="wrap_content" >
+<span class="lineno">  12</span> 
+<span class="lineno">  13</span>     <span class="errorspan">&lt;TableLayout</span>
+<span class="lineno">  14</span>         style="?android:attr/buttonBarStyle"
+<span class="lineno">  15</span>         android:layout_width="wrap_content"
+</pre>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Eclipse/ADT&nbsp;<img alt="Fix" border="0" align="top" src="lint-results_files/lint-run.png" />
+<br>
+Priority: 2 / 10<br/>
+Category: Performance</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Useless parent layout.</div>
+<div class="explanation">
+A layout with children that has no siblings, is not a scrollview or a root layout, and does not have a background, can be removed and have its children moved directly into the parent for a flatter and more efficient layout hierarchy.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "UselessParent" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+
+<a name="Usability:Icons"></a>
+<div class="category"><a href="#" title="Return to top">Usability:Icons</a><div class="categorySeparator"></div>
+</div>
+<a name="IconDensities"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">IconDensities: Icon densities validation</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../src/main/res/drawable-mdpi">../../src/main/res/drawable-mdpi</a></span>: <span class="message">Missing the following drawables in <code>drawable-mdpi</code>: afc_button_sort_as.png, afc_button_sort_as_disabled.png, afc_button_sort_as_pressed.png, afc_button_sort_de.png, afc_button_sort_de_disabled.png... (1 more)</span><br />
+<span class="location"><a href="../../src/main/res/drawable-xhdpi">../../src/main/res/drawable-xhdpi</a></span>: <span class="message">Missing the following drawables in <code>drawable-xhdpi</code>: afc_button_sort_as.png, afc_button_sort_as_disabled.png, afc_button_sort_as_pressed.png, afc_button_sort_de.png, afc_button_sort_de_disabled.png... (1 more)</span><br />
+</div>
+<div class="metadata">Priority: 4 / 10<br/>
+Category: Usability:Icons</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Icon densities validation.</div>
+<div class="explanation">
+Icons will look best if a custom version is provided for each of the major screen density classes (low, medium, high, extra high). This lint check identifies icons which do not have complete coverage across the densities.<br/>
+<br/>
+Low density is not really used much anymore, so this check ignores the ldpi density. To force lint to include it, set the environment variable <code>ANDROID_LINT_INCLUDE_LDPI=true</code>. For more information on current density usage, see <a href="http://developer.android.com/resources/dashboard/screens.html">http://developer.android.com/resources/dashboard/screens.html</a>
+</div>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/practices/screens_support.html">http://developer.android.com/guide/practices/screens_support.html</a>
+</div><br/>To suppress this error, use the issue id "IconDensities" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="IconMissingDensityFolder"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">IconMissingDensityFolder: Missing density folder</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../src/main/res">../../src/main/res</a></span>: <span class="message">Missing density variation folders in <code>src/main/res</code>: drawable-xxhdpi, drawable-xxxhdpi</span><br />
+</div>
+<div class="metadata">Priority: 3 / 10<br/>
+Category: Usability:Icons</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Missing density folder.</div>
+<div class="explanation">
+Icons will look best if a custom version is provided for each of the major screen density classes (low, medium, high, extra-high, extra-extra-high). This lint check identifies folders which are missing, such as <code>drawable-hdpi</code>.<br/>
+Low density is not really used much anymore, so this check ignores the ldpi density. To force lint to include it, set the environment variable <code>ANDROID_LINT_INCLUDE_LDPI=true</code>. For more information on current density usage, see <a href="http://developer.android.com/resources/dashboard/screens.html">http://developer.android.com/resources/dashboard/screens.html</a>
+</div>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/practices/screens_support.html">http://developer.android.com/guide/practices/screens_support.html</a>
+</div><br/>To suppress this error, use the issue id "IconMissingDensityFolder" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+
+<a name="Usability"></a>
+<div class="category"><a href="#" title="Return to top">Usability</a><div class="categorySeparator"></div>
+</div>
+<a name="ButtonOrder"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">ButtonOrder: Button order</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../src/main/res/layout/afc_file_chooser.xml">../../src/main/res/layout/afc_file_chooser.xml</a>:198</span>: <span class="message">Layout uses the wrong button order for API >= 14: Create a <code>layout-v14/afc_file_chooser.xml</code> file with opposite order: Cancel button should be on the left (was "Ok | Cancel", should be "Cancel | Ok")</span><br /><pre class="errorlines">
+<span class="lineno"> 195</span>                 android:visibility="gone"
+<span class="lineno"> 196</span>                 android:text="Ok"    
+<span class="lineno"> 197</span>             />
+<span class="lineno"> 198</span>             <span class="errorspan">&lt;Button</span>
+<span class="lineno"> 199</span>                 android:id="@+id/afc_filechooser_activity_button_cancel"
+<span class="lineno"> 200</span>                 style="?android:attr/buttonBarButtonStyle"
+</pre>
+<span class="location"><a href="../../src/main/res/layout-v11/afc_file_chooser.xml">../../src/main/res/layout-v11/afc_file_chooser.xml</a>:201</span>: <span class="message">Layout uses the wrong button order for API >= 14: Create a <code>layout-v14/afc_file_chooser.xml</code> file with opposite order: Cancel button should be on the left (was "Ok | Cancel", should be "Cancel | Ok")</span><br /><pre class="errorlines">
+<span class="lineno"> 198</span>                 android:visibility="gone"
+<span class="lineno"> 199</span>                 android:text="Ok"    
+<span class="lineno"> 200</span>             />
+<span class="lineno"> 201</span>             <span class="errorspan">&lt;Button</span>
+<span class="lineno"> 202</span>                 android:id="@+id/afc_filechooser_activity_button_cancel"
+<span class="lineno"> 203</span>                 style="?android:attr/buttonBarButtonStyle"
+</pre>
+</div>
+<div class="metadata">Priority: 8 / 10<br/>
+Category: Usability</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Button order.</div>
+<div class="explanation">
+According to the Android Design Guide,<br/>
+<br/>
+"Action buttons are typically Cancel and/or OK, with OK indicating the preferred or most likely action. However, if the options consist of specific actions such as Close or Wait rather than a confirmation or cancellation of the action described in the content, then all the buttons should be active verbs. As a rule, the dismissive action of a dialog is always on the left whereas the affirmative actions are on the right."<br/>
+<br/>
+This check looks for button bars and buttons which look like cancel buttons, and makes sure that these are on the left.
+</div>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/design/building-blocks/dialogs.html">http://developer.android.com/design/building-blocks/dialogs.html</a>
+</div><br/>To suppress this error, use the issue id "ButtonOrder" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="TextFields"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">TextFields: Missing <code>inputType</code> or <code>hint</code></a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../src/main/res/layout/afc_simple_text_input_view.xml">../../src/main/res/layout/afc_simple_text_input_view.xml</a>:14</span>: <span class="message">This text field does not specify an <code>inputType</code> or a <code>hint</code></span><br /><pre class="errorlines">
+<span class="lineno">  11</span>     android:layout_height="match_parent"
+<span class="lineno">  12</span>     android:orientation="vertical" >
+<span class="lineno">  13</span> 
+<span class="lineno">  14</span>     <span class="errorspan">&lt;EditText</span>
+<span class="lineno">  15</span>         android:id="@+id/afc_simple_text_input_view_text1"
+<span class="lineno">  16</span>         android:layout_width="match_parent"
+</pre>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Eclipse/ADT & Android Studio/IntelliJ&nbsp;<img alt="Fix" border="0" align="top" src="lint-results_files/lint-run.png" />
+<br>
+Priority: 5 / 10<br/>
+Category: Usability</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Missing <code>inputType</code> or <code>hint</code></div>
+<div class="explanation">
+Providing an <code>inputType</code> attribute on a text field improves usability because depending on the data to be input, optimized keyboards can be shown to the user (such as just digits and parentheses for a phone number). Similarly,a hint attribute displays a hint to the user for what is expected in the text field.<br/>
+<br/>
+The lint detector also looks at the <code>id</code> of the view, and if the id offers a hint of the purpose of the field (for example, the <code>id</code> contains the phrase <code>phone</code> or <code>email</code>), then lint will also ensure that the <code>inputType</code> contains the corresponding type attributes.<br/>
+<br/>
+If you really want to keep the text field generic, you can suppress this warning by setting <code>inputType="text"</code>.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "TextFields" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+
+<a name="Accessibility"></a>
+<div class="category"><a href="#" title="Return to top">Accessibility</a><div class="categorySeparator"></div>
+</div>
+<a name="ClickableViewAccessibility"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">ClickableViewAccessibility: Accessibility in Custom Views</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../src/main/java/group/pals/android/lib/ui/filechooser/FileChooserActivity.java">../../src/main/java/group/pals/android/lib/ui/filechooser/FileChooserActivity.java</a>:727</span>: <span class="message"><code>group/pals/android/lib/ui/filechooser/FileChooserActivity$5#onTouch</code> should call <code>View#performClick</code> when a click is detected</span><br /><pre class="errorlines">
+<span class="lineno"> 724</span>         mViewFiles.setOnTouchListener(new View.OnTouchListener() {
+<span class="lineno"> 725</span> 
+<span class="lineno"> 726</span>             @Override
+<span class="lineno"> 727</span>             public boolean <span class="errorspan">onTouch(View v, MotionEvent event) {</span>
+<span class="lineno"> 728</span>                 return mListviewFilesGestureDetector.onTouchEvent(event);
+<span class="lineno"> 729</span>             }
+</pre>
+</div>
+<div class="metadata">Priority: 6 / 10<br/>
+Category: Accessibility</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Accessibility in Custom Views.</div>
+<div class="explanation">
+If a <code>View</code> that overrides <code>onTouchEvent</code> or uses an <code>OnTouchListener</code> does not also implement <code>performClick</code> and call it when clicks are detected, the <code>View</code> may not handle accessibility actions properly. Logic handling the click actions should ideally be placed in <code>View#performClick</code> as some accessibility services invoke <code>performClick</code> when a click action should occur.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "ClickableViewAccessibility" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="ContentDescription"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">ContentDescription: Image without <code>contentDescription</code></a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../src/main/res/layout-v11/afc_file_chooser.xml">../../src/main/res/layout-v11/afc_file_chooser.xml</a>:55</span>: <span class="message">[Accessibility] Missing <code>contentDescription</code> attribute on image</span><br /><pre class="errorlines">
+<span class="lineno">  52</span>                     android:layout_alignParentLeft="true"
+<span class="lineno">  53</span>                     android:orientation="horizontal"
+<span class="lineno">  54</span>                 >
+<span class="lineno">  55</span>                     <span class="errorspan">&lt;ImageView</span>
+<span class="lineno">  56</span>                         android:id="@+id/afc_filechooser_activity_button_go_back"
+<span class="lineno">  57</span>                         style="@style/afc_button_navi_left"/>
+</pre>
+<span class="location"><a href="../../src/main/res/layout-v11/afc_file_chooser.xml">../../src/main/res/layout-v11/afc_file_chooser.xml</a>:58</span>: <span class="message">[Accessibility] Missing <code>contentDescription</code> attribute on image</span><br /><pre class="errorlines">
+<span class="lineno">  55</span>                     &lt;ImageView
+<span class="lineno">  56</span>                         android:id="@+id/afc_filechooser_activity_button_go_back"
+<span class="lineno">  57</span>                         style="@style/afc_button_navi_left"/>
+<span class="lineno">  58</span>                     <span class="errorspan">&lt;ImageView</span>
+<span class="lineno">  59</span>                         android:id="@+id/afc_filechooser_activity_button_go_forward"
+<span class="lineno">  60</span>                         style="@style/afc_button_navi_right"/>
+</pre>
+<span class="location"><a href="../../src/main/res/layout-v11/afc_file_chooser.xml">../../src/main/res/layout-v11/afc_file_chooser.xml</a>:69</span>: <span class="message">[Accessibility] Missing <code>contentDescription</code> attribute on image</span><br /><pre class="errorlines">
+<span class="lineno">  66</span>                     android:layout_alignParentRight="true"
+<span class="lineno">  67</span>                     android:orientation="horizontal"
+<span class="lineno">  68</span>                 >
+<span class="lineno">  69</span>                     <span class="errorspan">&lt;ImageView</span>
+<span class="lineno">  70</span>                         android:id="@+id/afc_filechooser_activity_button_sort"
+<span class="lineno">  71</span>                         style="@style/afc_button_sort"/>
+</pre>
+<span class="location"><a href="../../src/main/res/layout-v11/afc_file_chooser.xml">../../src/main/res/layout-v11/afc_file_chooser.xml</a>:72</span>: <span class="message">[Accessibility] Missing <code>contentDescription</code> attribute on image</span><br /><pre class="errorlines">
+<span class="lineno">  69</span>                     &lt;ImageView
+<span class="lineno">  70</span>                         android:id="@+id/afc_filechooser_activity_button_sort"
+<span class="lineno">  71</span>                         style="@style/afc_button_sort"/>
+<span class="lineno">  72</span>                     <span class="errorspan">&lt;ImageView</span>
+<span class="lineno">  73</span>                         android:id="@+id/afc_filechooser_activity_button_folders_view"
+<span class="lineno">  74</span>                         style="@style/afc_button_folders_view"
+</pre>
+<span class="location"><a href="../../src/main/res/layout-v11/afc_file_chooser.xml">../../src/main/res/layout-v11/afc_file_chooser.xml</a>:76</span>: <span class="message">[Accessibility] Missing <code>contentDescription</code> attribute on image</span><br /><pre class="errorlines">
+<span class="lineno">  73</span>                         android:id="@+id/afc_filechooser_activity_button_folders_view"
+<span class="lineno">  74</span>                         style="@style/afc_button_folders_view"
+<span class="lineno">  75</span>                         />
+<span class="lineno">  76</span>                     <span class="errorspan">&lt;ImageView</span>
+<span class="lineno">  77</span>                         android:id="@+id/afc_filechooser_activity_button_create_folder"
+<span class="lineno">  78</span>                         style="@style/afc_button_create_folder"/>
+</pre>
+<span class="location"><a href="../../src/main/res/layout/afc_file_item.xml">../../src/main/res/layout/afc_file_item.xml</a>:14</span>: <span class="message">[Accessibility] Missing <code>contentDescription</code> attribute on image</span><br /><pre class="errorlines">
+<span class="lineno">  11</span>     android:layout_height="wrap_content"
+<span class="lineno">  12</span>     android:orientation="horizontal" >
+<span class="lineno">  13</span> 
+<span class="lineno">  14</span>     <span class="errorspan">&lt;ImageView</span>
+<span class="lineno">  15</span>         android:id="@+id/afc_file_item_imageview_icon"
+<span class="lineno">  16</span>         android:layout_width="wrap_content"
+</pre>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Eclipse/ADT & Android Studio/IntelliJ&nbsp;<img alt="Fix" border="0" align="top" src="lint-results_files/lint-run.png" />
+<br>
+Priority: 3 / 10<br/>
+Category: Accessibility</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Image without <code>contentDescription</code></div>
+<div class="explanation">
+Non-textual widgets like ImageViews and ImageButtons should use the <code>contentDescription</code> attribute to specify a textual description of the widget such that screen readers and other accessibility tools can adequately describe the user interface.<br/>
+<br/>
+Note that elements in application screens that are purely decorative and do not provide any content or enable a user action should not have accessibility content descriptions. In this case, just suppress the lint warning with a tools:ignore="ContentDescription" attribute.<br/>
+<br/>
+Note that for text fields, you should not set both the <code>hint</code> and the <code>contentDescription</code> attributes since the hint will never be shown. Just set the <code>hint</code>. See <a href="http://developer.android.com/guide/topics/ui/accessibility/checklist.html#special-cases">http://developer.android.com/guide/topics/ui/accessibility/checklist.html#special-cases</a>.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "ContentDescription" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+
+<a name="Internationalization"></a>
+<div class="category"><a href="#" title="Return to top">Internationalization</a><div class="categorySeparator"></div>
+</div>
+<a name="HardcodedText"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">HardcodedText: Hardcoded text</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../src/main/res/layout/afc_file_chooser.xml">../../src/main/res/layout/afc_file_chooser.xml</a>:196</span>: <span class="message">[I18N] Hardcoded string "Ok", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno"> 193</span>                 android:layout_weight="1"
+<span class="lineno"> 194</span>                 android:layout_gravity="center"
+<span class="lineno"> 195</span>                 android:visibility="gone"
+<span class="lineno"> 196</span>                 <span class="errorspan">android:text="Ok"    </span>
+<span class="lineno"> 197</span>             />
+<span class="lineno"> 198</span>             &lt;Button
+</pre>
+<span class="location"><a href="../../src/main/res/layout-v11/afc_file_chooser.xml">../../src/main/res/layout-v11/afc_file_chooser.xml</a>:199</span>: <span class="message">[I18N] Hardcoded string "Ok", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno"> 196</span>                 android:layout_weight="1"
+<span class="lineno"> 197</span>                 android:layout_gravity="center"
+<span class="lineno"> 198</span>                 android:visibility="gone"
+<span class="lineno"> 199</span>                 <span class="errorspan">android:text="Ok"    </span>
+<span class="lineno"> 200</span>             />
+<span class="lineno"> 201</span>             &lt;Button
+</pre>
+<span class="location"><a href="../../src/main/res/layout/afc_file_chooser.xml">../../src/main/res/layout/afc_file_chooser.xml</a>:206</span>: <span class="message">[I18N] Hardcoded string "Cancel", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno"> 203</span>                 android:layout_weight="1"
+<span class="lineno"> 204</span>                 android:layout_gravity="center"
+<span class="lineno"> 205</span>                 android:visibility="gone"
+<span class="lineno"> 206</span>                 <span class="errorspan">android:text="Cancel"    </span>
+<span class="lineno"> 207</span>             />
+<span class="lineno"> 208</span>         &lt;/LinearLayout>
+</pre>
+<span class="location"><a href="../../src/main/res/layout-v11/afc_file_chooser.xml">../../src/main/res/layout-v11/afc_file_chooser.xml</a>:209</span>: <span class="message">[I18N] Hardcoded string "Cancel", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno"> 206</span>                 android:layout_weight="1"
+<span class="lineno"> 207</span>                 android:layout_gravity="center"
+<span class="lineno"> 208</span>                 android:visibility="gone"
+<span class="lineno"> 209</span>                 <span class="errorspan">android:text="Cancel"    </span>
+<span class="lineno"> 210</span>             />
+<span class="lineno"> 211</span>         &lt;/LinearLayout>
+</pre>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Eclipse/ADT&nbsp;<img alt="Fix" border="0" align="top" src="lint-results_files/lint-run.png" />
+<br>
+Priority: 5 / 10<br/>
+Category: Internationalization</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Hardcoded text.</div>
+<div class="explanation">
+Hardcoding text attributes directly in layout files is bad for several reasons:<br/>
+<br/>
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)<br/>
+<br/>
+* The application cannot be translated to other languages by just adding new translations for existing string resources.<br/>
+<br/>
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "HardcodedText" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+
+<a name="MissingIssues"></a>
+<div class="category">Disabled Checks<div class="categorySeparator"></div>
+</div>
+The following issues were not run by lint, either because the check is not enabled by default, or because it was disabled with a command line flag or via one or more lint.xml configuration files in the project directories.
+<br/><br/>
+<a name="BackButton"></a>
+<div class="issue">
+<div class="id">BackButton<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+Priority: 6 / 10<br/>
+Category: Usability</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Back button.</div>
+<div class="explanation">
+According to the Android Design Guide,<br/>
+<br/>
+"Other platforms use an explicit back button with label to allow the user to navigate up the application's hierarchy. Instead, Android uses the main action bar's app icon for hierarchical navigation and the navigation bar's back button for temporal navigation."<br/>
+This check is not very sophisticated (it just looks for buttons with the label "Back"), so it is disabled by default to not trigger on common scenarios like pairs of Back/Next buttons to paginate through screens.
+</div>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/design/patterns/pure-android.html">http://developer.android.com/design/patterns/pure-android.html</a>
+</div><br/>To suppress this error, use the issue id "BackButton" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="EasterEgg"></a>
+<div class="issue">
+<div class="id">EasterEgg<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+Priority: 6 / 10<br/>
+Category: Security</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Code contains easter egg.</div>
+<div class="explanation">
+An "easter egg" is code deliberately hidden in the code, both from potential users and even from other developers. This lint check looks for code which looks like it may be hidden from sight.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "EasterEgg" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="FieldGetter"></a>
+<div class="issue">
+<div class="id">FieldGetter<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+Priority: 4 / 10<br/>
+Category: Performance</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Using getter instead of field.</div>
+<div class="explanation">
+Accessing a field within the class that defines a getter for that field is at least 3 times faster than calling the getter. For simple getters that do nothing other than return the field, you might want to just reference the local field directly instead.<br/>
+<br/>
+<b>NOTE</b>: As of Android 2.3 (Gingerbread), this optimization is performed automatically by Dalvik, so there is no need to change your code; this is only relevant if you are targeting older versions of Android.
+</div>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/practices/design/performance.html#internal_get_set">http://developer.android.com/guide/practices/design/performance.html#internal_get_set</a>
+</div><br/>To suppress this error, use the issue id "FieldGetter" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="IconExpectedSize"></a>
+<div class="issue">
+<div class="id">IconExpectedSize<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+Priority: 5 / 10<br/>
+Category: Usability:Icons</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Icon has incorrect size.</div>
+<div class="explanation">
+There are predefined sizes (for each density) for launcher icons. You should follow these conventions to make sure your icons fit in with the overall look of the platform.
+</div>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/design/style/iconography.html">http://developer.android.com/design/style/iconography.html</a>
+</div><br/>To suppress this error, use the issue id "IconExpectedSize" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="LogConditional"></a>
+<div class="issue">
+<div class="id">LogConditional<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+Priority: 5 / 10<br/>
+Category: Performance</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Unconditional Logging Calls.</div>
+<div class="explanation">
+The BuildConfig class (available in Tools 17) provides a constant, "DEBUG", which indicates whether the code is being built in release mode or in debug mode. In release mode, you typically want to strip out all the logging calls. Since the compiler will automatically remove all code which is inside a "if (false)" check, surrounding your logging calls with a check for BuildConfig.DEBUG is a good idea.<br/>
+<br/>
+If you <b>really</b> intend for the logging to be present in release mode, you can suppress this warning with a @SuppressLint annotation for the intentional logging calls.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "LogConditional" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="NegativeMargin"></a>
+<div class="issue">
+<div class="id">NegativeMargin<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+Priority: 4 / 10<br/>
+Category: Usability</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Negative Margins.</div>
+<div class="explanation">
+Margin values should be positive. Negative values are generally a sign that you are making assumptions about views surrounding the current one, or may be tempted to turn off child clipping to allow a view to escape its parent. Turning off child clipping to do this not only leads to poor graphical performance, it also results in wrong touch event handling since touch events are based strictly on a chain of parent-rect hit tests. Finally, making assumptions about the size of strings can lead to localization problems.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "NegativeMargin" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="NewerVersionAvailable"></a>
+<div class="issue">
+<div class="id">NewerVersionAvailable<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Android Studio/IntelliJ&nbsp;<img alt="Fix" border="0" align="top" src="lint-results_files/lint-run.png" />
+<br>
+Disabled By: Default<br/>
+Priority: 4 / 10<br/>
+Category: Correctness</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Newer Library Versions Available.</div>
+<div class="explanation">
+This detector checks with a central repository to see if there are newer versions available for the dependencies used by this project.<br/>
+This is similar to the <code>GradleDependency</code> check, which checks for newer versions available in the Android SDK tools and libraries, but this works with any MavenCentral dependency, and connects to the library every time, which makes it more flexible but also <b>much</b> slower.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "NewerVersionAvailable" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="SelectableText"></a>
+<div class="issue">
+<div class="id">SelectableText<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Android Studio/IntelliJ&nbsp;<img alt="Fix" border="0" align="top" src="lint-results_files/lint-run.png" />
+<br>
+Disabled By: Default<br/>
+Priority: 7 / 10<br/>
+Category: Usability</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Dynamic text should probably be selectable.</div>
+<div class="explanation">
+If a <code>&lt;TextView></code> is used to display data, the user might want to copy that data and paste it elsewhere. To allow this, the <code>&lt;TextView></code> should specify <code>android:textIsSelectable="true"</code>.<br/>
+<br/>
+This lint check looks for TextViews which are likely to be displaying data: views whose text is set dynamically. This value will be ignored on platforms older than API 11, so it is okay to set it regardless of your <code>minSdkVersion</code>.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "SelectableText" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="StopShip"></a>
+<div class="issue">
+<div class="id">StopShip<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Android Studio/IntelliJ&nbsp;<img alt="Fix" border="0" align="top" src="lint-results_files/lint-run.png" />
+<br>
+Disabled By: Default<br/>
+Priority: 10 / 10<br/>
+Category: Correctness</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Code contains <code>STOPSHIP</code> marker.</div>
+<div class="explanation">
+Using the comment <code>// STOPSHIP</code> can be used to flag code that is incomplete but checked in. This comment marker can be used to indicate that the code should not be shipped until the issue is addressed, and lint will look for these.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "StopShip" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="TypographyQuotes"></a>
+<div class="issue">
+<div class="id">TypographyQuotes<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Eclipse/ADT & Android Studio/IntelliJ&nbsp;<img alt="Fix" border="0" align="top" src="lint-results_files/lint-run.png" />
+<br>
+Disabled By: Default<br/>
+Priority: 5 / 10<br/>
+Category: Usability:Typography</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Straight quotes can be replaced with curvy quotes.</div>
+<div class="explanation">
+Straight single quotes and double quotes, when used as a pair, can be replaced by "curvy quotes" (or directional quotes). This can make the text more readable.<br/>
+<br/>
+Note that you should never use grave accents and apostrophes to quote, `like this'.<br/>
+<br/>
+(Also note that you should not use curvy quotes for code fragments.)
+</div>
+<br/><div class="moreinfo">More info: <a href="http://en.wikipedia.org/wiki/Quotation_mark">http://en.wikipedia.org/wiki/Quotation_mark</a>
+</div><br/>To suppress this error, use the issue id "TypographyQuotes" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="UnusedIds"></a>
+<div class="issue">
+<div class="id">UnusedIds<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+Priority: 1 / 10<br/>
+Category: Performance</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Unused id.</div>
+<div class="explanation">
+This resource id definition appears not to be needed since it is not referenced from anywhere. Having id definitions, even if unused, is not necessarily a bad idea since they make working on layouts and menus easier, so there is not a strong reason to delete these.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "UnusedIds" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+
+<a name="SuppressInfo"></a>
+<div class="category">Suppressing Warnings and Errors<div class="categorySeparator"></div>
+</div>
+Lint errors can be suppressed in a variety of ways:<br/>
+<br/>
+1. With a <code>@SuppressLint</code> annotation in the Java code<br/>
+2. With a <code>tools:ignore</code> attribute in the XML file<br/>
+3. With ignore flags specified in the <code>build.gradle</code> file, as explained below<br/>
+4. With a <code>lint.xml</code> configuration file in the project<br/>
+5. With a <code>lint.xml</code> configuration file passed to lint via the --config flag<br/>
+6. With the --ignore flag passed to lint.<br/>
+<br/>
+To suppress a lint warning with an annotation, add a <code>@SuppressLint("id")</code> annotation on the class, method or variable declaration closest to the warning instance you want to disable. The id can be one or more issue id's, such as <code>"UnusedResources"</code> or <code>{"UnusedResources","UnusedIds"}</code>, or it can be <code>"all"</code> to suppress all lint warnings in the given scope.<br/>
+<br/>
+To suppress a lint warning in an XML file, add a <code>tools:ignore="id"</code> attribute on the element containing the error, or one of its surrounding elements. You also need to define the namespace for the tools prefix on the root element in your document, next to the <code>xmlns:android</code> declaration:<br/>
+<code>xmlns:tools="http://schemas.android.com/tools"</code><br/>
+<br/>
+To suppress a lint warning in a <code>build.gradle</code> file, add a section like this:<br/>
+<br/>
+android {<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;lintOptions {<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;disable 'TypographyFractions','TypographyQuotes'<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+}<br/>
+<br/>
+Here we specify a comma separated list of issue id's after the disable command. You can also use <code>warning</code> or <code>error</code> instead of <code>disable</code> to change the severity of issues.<br/>
+<br/>
+To suppress lint warnings with a configuration XML file, create a file named <code>lint.xml</code> and place it at the root directory of the project in which it applies.<br/>
+<br/>
+The format of the <code>lint.xml</code> file is something like the following:<br/>
+<br/>
+&lt;?xml version="1.0" encoding="UTF-8"?><br/>
+&lt;lint><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Disable this given check in this project --><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;issue id="IconMissingDensityFolder" severity="ignore" /><br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Ignore the ObsoleteLayoutParam issue in the given files --><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;issue id="ObsoleteLayoutParam"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ignore path="res/layout/activation.xml" /><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ignore path="res/layout-xlarge/activation.xml" /><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/issue><br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Ignore the UselessLeaf issue in the given file --><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;issue id="UselessLeaf"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ignore path="res/layout/main.xml" /><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/issue><br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Change the severity of hardcoded strings to "error" --><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;issue id="HardcodedText" severity="error" /><br/>
+&lt;/lint><br/>
+<br/>
+To suppress lint checks from the command line, pass the --ignore flag with a comma separated list of ids to be suppressed, such as:<br/>
+<code>$ lint --ignore UnusedResources,UselessLeaf /my/project/path</code><br/>
+<br/>
+For more information, see <a href="http://tools.android.com/tips/lint/suppressing-lint-warnings">http://tools.android.com/tips/lint/suppressing-lint-warnings</a><br/>
+
+
+</body>
+</html>
